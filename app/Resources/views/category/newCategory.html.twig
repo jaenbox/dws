@@ -1,0 +1,16 @@
+{# app/Resources/views/product/newCategory.html.twig #}
+
+{% extends "base.html.twig" %}
+
+{% block title %}Actividad 61. Form new category{% endblock %}
+
+
+{% block body %}
+	<hr><hr>
+	<h2>Category</h2>
+	<form method="post" action="#" {{ form_enctype(form) }}>
+		{{ form_errors(form) }}
+		{{ form_widget(form) }}
+	</form>
+{% endblock %}
+{% block javascripts %}{% endblock %}

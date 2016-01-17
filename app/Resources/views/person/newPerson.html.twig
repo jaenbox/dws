@@ -1,0 +1,25 @@
+{# app/Resources/views/person/newPerson.html.twig #}
+
+{% extends "base.html.twig" %}
+
+{% block title %}Actividad 62. Form new person{% endblock %}
+
+{% block body %}
+	<hr><hr>
+	<h2>Person</h2>
+	<div class="content">
+		<div class="row">
+			<div class="col-sm-5">
+				<form name="form" method="post" action="#" class="form-horizontal">
+					{{ form_start(form) }}
+					{{ form_errors(form) }}
+				
+					<div class="form-group">
+						{{ form_widget(form) }}
+					</div> 
+				</form>
+			</div>
+		</div>	
+	</div>
+{% endblock %}
+{% block javascripts %}{% endblock %}

@@ -1,0 +1,20 @@
+{% extends "base.html.twig" %}
+
+{% block title %}Actividad 2. listByCategory {% endblock %}
+
+{% block body %}
+
+	<hr><hr>
+	{# Listamos los productos en una lista. #}
+	<h4>{{ category.name}}<h4>
+
+	{% for product in category.products %}
+	
+		<table>
+			<tr>
+				<td>{{ product.id }}</td><td>{{ product.name }}</td><td>{{ product.description }}</td><td>{{ product.price }}</td>
+			</tr>
+		</table>
+	{% endfor %}
+{% endblock %}
+{% block javascripts %}{% endblock %}

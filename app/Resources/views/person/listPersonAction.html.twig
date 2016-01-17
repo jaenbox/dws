@@ -1,0 +1,45 @@
+{% extends "base.html.twig" %}
+
+{% block title %}Actividad 1. Show Products{% endblock %}
+
+
+{% block body %}
+	{# Mostramos los objetos con dump 
+	{{ dump(person) }} #}
+	<hr><hr>
+	{# Listamos el producto en una lista. #}
+	<table class="table table-striped">
+		<tbody>
+			<thead>
+				<tr>
+					<td>Id</td>
+					<td>Name</td>
+					<td>Email</td>
+					<td>Eliminar</td>
+				</tr>
+			</thead>
+			<h1>Listado de personas</h1>	
+				{% for persona in person%}
+					<tr>
+						<td><a href="{{
+							path(
+								'showPersonAction',
+								{ 'id': persona.id }
+							)
+							}}">
+							{{ persona.id }}</a></td>
+						<td>{{ persona.name }}</td>
+						<td>{{ persona.email }}</td>
+						<td><a href="{{
+							path(
+								'deletePersonAction',
+								{ 'id': persona.id }
+							) 
+							}}"><i class="fa fa-trash fa-lg"></i></a></td>
+					</tr>
+				{% endfor %} 
+		</tbody>
+	</table> 
+	<a href="{{ url('newPersonAction')}}">atrás</a>
+{% endblock %}
+{% block javascripts %}{% endblock %}

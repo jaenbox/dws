@@ -1,0 +1,18 @@
+{% extends "base.html.twig" %}
+
+{% block title %}Actividad 61. Delete Category {% endblock %}
+
+
+{% block body %}
+	{# Mostramos los objetos con dump 
+	{{ dump(category) }} #}
+	
+	{# Mostramos el mensaje success #}
+	<hr><hr>
+	La category <strong>{{ category.name}}</strong> a sido eliminada.
+	<div>
+		<a href="{{ url('listActionCategory')}}">atrás</a>
+	</div>
+	
+{% endblock %}
+{% block javascripts %}{% endblock %}

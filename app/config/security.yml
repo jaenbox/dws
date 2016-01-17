@@ -1,0 +1,39 @@
+# To get started with security, check out the documentation:
+# http://symfony.com/doc/current/book/security.html
+security:
+    # http://symfony.com/doc/current/book/security.html#where-do-users-come-from-user-providers
+    providers:
+        fos_userbundle:
+         id: fos_user.user_provider.username_email
+     
+    encoders:
+     FOS\UserBundle\Model\UserInterface: bcrypt
+    
+    role_hierarchy:
+     ROLE_ADMIN: [ROLE_USER, ROLE_APP_ADMIN]
+     ROLE_SUPER_ADMIN: ROLE_ADMIN 
+
+    firewalls:
+    
+        my_secured_area:
+             pattern: ^/
+             form_login:
+              provider: fos_userbundle
+              csrf_token_generator: security.csrf.token_manager
+             
+             logout: true
+             anonymous: true
+
+    access_control:
+     - { path: ^/admin, roles: ROLE_APP_ADMIN }
+     - { path: ^/product/list, roles: [ROLE_APP_ADMIN, ROLE_USER] }
+     - { path: ^/product/edit, roles: ROLE_APP_ADMIN }
+     - { path: ^/product/delete, roles: ROLE_APP_ADMIN }
+     - { path: ^/category/list, roles: [ROLE_APP_ADMIN, ROLE_USER] }
+     - { path: ^/category/edit, roles: ROLE_APP_ADMIN }
+     - { path: ^/category/delete, roles: ROLE_APP_ADMIN }
+     - { path: ^/category/new, roles: ROLE_APP_ADMIN }
+     - { path: ^/product/new, roles: ROLE_APP_ADMIN }
+     - { path: ^/login$, role: IS_AUTHENTICATED_ANONYMOUSLY }
+     - { path: ^/register, role: IS_AUTHENTICATED_ANONYMOUSLY }
+     - { path: ^/resetting, role: IS_AUTHENTICATED_ANONYMOUSLY }

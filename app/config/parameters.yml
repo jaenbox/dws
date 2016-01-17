@@ -1,0 +1,12 @@
+# This file is auto-generated during the composer install
+parameters:
+    database_host: 127.0.0.1
+    database_port: null
+    database_name: Postgresdb_DJaen
+    database_user: jaen
+    database_password: jaen
+    mailer_transport: smtp
+    mailer_host: 127.0.0.1
+    mailer_user: null
+    mailer_password: null
+    secret: 47dafa44ab44099cb6ede24d771d3f6c18cc34e5

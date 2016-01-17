@@ -1,0 +1,94 @@
+app:
+    resource: "@AppBundle/Controller/"
+    type:     annotation
+
+index:
+ path: /
+ defaults: { _controller: AppBundle:Default:index}
+ 
+createStatic:
+ path: /product/create
+ defaults: { _controller: AppBundle:Product:createStatic }
+
+showAction:
+ path: /product/show/{id}
+ defaults: { _controller: AppBundle:Product:show }
+
+listActionProduct:
+ path: /product/list
+ defaults: { _controller: AppBundle:Product:list }
+
+createParam:
+ path: /product/create/{name}/{price}
+ defaults: { _controller: AppBundle:Product:createParam }
+ requirements:
+  name: ^[\w]+$
+  price: \d{2}|\d{2}\.\d{2}
+
+createAction:
+ path: /category/create/{name}
+ defaults: { _controller: AppBundle:Category:create }
+ requirements:
+  name: ^[\w]+$
+
+deleteAction:
+ path: /category/delete/{id}
+ defaults: { _controller: AppBundle:Category:delete }
+ requirements:
+  id: \d+
+
+listActionCategory:
+ path: /category/list
+ defaults: { _controller: AppBundle:Category:list }
+
+listByCategory:
+ path: /product/list/category/{category}
+ defaults: { _controller: AppBundle:Product:listByCategory }
+ requirements:
+  category: ^[\w]+$
+
+listAllByCategory:
+ path: /product/list/category
+ defaults: { _controller: AppBundle:Product:listAllByCategory }
+
+deleteProduct:
+ path: /product/delete/{id}
+ defaults: { _controller: AppBundle:Product:delete }
+ requirements:
+  id: \d+
+
+newProductAction:
+ path: /product/new
+ defaults: { _controller: AppBundle:Product:newProduct }
+
+newCategoryAction:
+ path: /category/new
+ defaults: { _controller: AppBundle:Category:newCategory }
+
+newPersonAction:
+ path: /person/new
+ defaults: { _controller: AppBundle:Person:new }
+
+listPersonAction:
+ path: /person/list
+ defaults: { _controller: AppBundle:Person:list }
+
+showPersonAction:
+ path: /person/show/{id}
+ defaults: { _controller: AppBundle:Person:show }
+
+deletePersonAction:
+ path: /person/delete/{id}
+ defaults: { _controller: AppBundle:Person:delete }
+
+editProduct:
+ path: /product/edit/{id}
+ defaults: { _controller: AppBundle:Product:edit }
+
+editCategory:
+ path: /category/edit/{id}
+ defaults: { _controller: AppBundle:Category:edit }
+
+# FOSUserBundle
+fos_user:
+ resource: "@FOSUserBundle/Resources/config/routing/all.xml"

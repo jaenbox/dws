@@ -1,0 +1,28 @@
+{% extends "base.html.twig" %}
+
+{% block title %}Actividad 1. Show Products{% endblock %}
+{% block body %}	
+	{# Listamos el producto en una lista. #}
+	<hr><hr>
+	<table>
+		<tbody>
+			<thead>
+				<tr>
+					<td>Id</td>
+					<td>Name</td>
+					<td>Price</td>
+					<td>Description</td>
+					<td>Category</td>
+				</tr>
+			</thead>
+				<tr>
+					<td>{{ product.id }}</td>
+					<td>{{ product.name }}</td>
+					<td>{{ product.price }}</td>
+					<td>{{ product.description }}</td>
+					<td>{{ product.category.name }}</td>
+				</tr>
+		</tbody>
+	</table> 
+{% endblock %}
+{% block javascripts %}{% endblock %}

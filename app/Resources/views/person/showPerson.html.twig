@@ -1,0 +1,49 @@
+{% extends "base.html.twig" %}
+
+{% block title %}Actividad 62. Show Person{% endblock %}
+
+
+{% block body %}
+	{# Mostramos los objetos con dump 
+	{{ dump(product) }} #}
+	
+	{# Listamos el cliente en una lista. #}
+	<hr><hr>
+	<h2>Person: {{ person.name }}</h2>
+	<table class="table">
+		<tbody>
+				<tr><th>Id</th><td>{{ person.id }}</td></tr>
+				<tr><th>Nombre</th><td>{{ person.name }}</td></tr>
+				<tr><th>Edad</th><td>{{ person.age }}</td></tr>
+				<tr><th>Fecha Nac.</th><td>{{ person.birthDate|date("d/m/Y") }}</td></tr>
+				<tr><th>Altura</th><td>{{ person.height }}</td></tr>
+				<tr><th><i class="fa fa-envelope fa-2x"></th><td>{{ person.email }}</td></tr>
+				<tr><th><i class="fa fa-phone-square fa-2x"></th><td>{{ person.phone }}</td></tr>
+				<tr><th>Sexo</th><td>{{ person.gender }}</td></tr>
+				<tr><th>Descendientes</th><td>{{ person.descends }}</td></tr>
+				<tr><th><i class="fa fa-car fa-2x"></th><td>{{ person.vehicle }}</td></tr>
+				<tr><th>Idioma</th><td>{{ person.preferredLanguage }}</td></tr>
+				<tr><th>Nivel de Inglés</th><td>{% if person.englishLevel == 0 %}
+													none</td></tr>
+												{% elseif person.englishLevel == 1 %}
+												 	A1</td></tr>
+												{% elseif person.englishLevel == 2 %}
+													A2</td></tr>
+												{% elseif person.englishLevel == 3 %}
+													B1</td></tr>
+												{% elseif person.englishLevel == 4 %}
+													B2</td></tr>
+												{% elseif person.englishLevel == 5 %}
+													C1</td></tr>
+												{% elseif person.englishLevel == 6 %}
+													C2</td></tr>
+												{% endif %}
+				<tr><th>WebSite</th><td>{{ person.personalWebSite }}</td></tr>
+				<tr><th><i class="fa fa-credit-card fa-2x"></th><td>{{ person.cardNumber }}</td></tr>
+				<tr><th>Número de cuenta bancaria (IBAN)</th><td>{{ person.iban }}</td></tr>
+				{# <tr><th>Imágen</th><td><img src="holder.js/200x200"/></td></tr> #}
+		</tbody>
+	</table> 
+	<a href="{{ url('listPersonAction')}}">atrás</a>
+{% endblock %}
+{% block javascripts %}{% endblock %}

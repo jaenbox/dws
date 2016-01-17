@@ -1,0 +1,71 @@
+{% extends "base.html.twig" %}
+
+{% block title %}Actividad 1. Productos{% endblock %}
+
+{% block body %}
+	
+	{# Listamos los productos en una lista. #}
+	<hr><hr>
+	<table class="table table-striped">	
+		{% if is_granted('ROLE_APP_ADMIN') %}
+			<tbody>
+				<thead>
+					<tr>
+						<td>Id</td>
+						<td>Name</td>
+						<td>Price</td>
+						<td>Description</td>
+						<td>Category</td>
+						<td>Edit</td>
+						<td>Delete</td>
+					</tr>
+				</thead>
+				<h1>Listado de productos</h1>
+					{% for producto in products %}
+						<tr>
+							<td>{{ producto.id }}</td>
+							<td>{{ producto.name }}</td>
+							<td>{{ producto.price }}</td>
+							<td>{{ producto.description }}</td>
+							<td>{{ producto.category.name }}</td>
+							<td><a href="{{
+								path(
+									'editProduct',
+									{ 'id': producto.id }
+								) 
+								}}"><i class="fa fa-pencil-square-o"></i></a></td>
+							<td><a href="{{
+								path(
+									'deleteProduct',
+									{ 'id': producto.id }
+								) 
+								}}"><i class="fa fa-trash fa-lg"></i></a></td>
+						</tr>
+					{% endfor %}
+				{% elseif is_granted('ROLE_USER') %}
+					<tbody>
+					<thead>
+						<tr>
+							<td>Id</td>
+							<td>Name</td>
+							<td>Price</td>
+							<td>Description</td>
+							<td>Category</td>
+						</tr>
+					</thead>
+					<h1>Listado de productos</h1>
+					{% for producto in products %}
+						<tr>
+							<td>{{ producto.id }}</td>
+							<td>{{ producto.name }}</td>
+							<td>{{ producto.price }}</td>
+							<td>{{ producto.description }}</td>
+							<td>{{ producto.category.name }}</td>
+						</tr>
+					{% endfor %}
+				{% endif %} 
+		</tbody>
+	</table> 
+	<a href="{{ url('newProductAction')}}">atrás</a> 
+{% endblock %}
+{% block javascripts %}{% endblock %}

@@ -1,0 +1,15 @@
+{# app/Resources/views/product/newProduct.html.twig #}
+
+{% extends "base.html.twig" %}
+
+{% block title %}Actividad 61. Form new  product{% endblock %}
+
+{% block body %}
+	<hr><hr>
+	<h2>Product</h2>
+	<form method="post" action="#" {{ form_enctype(form) }}>
+		{{ form_errors(form) }}
+		{{ form_widget(form) }}
+	</form>	
+{% endblock %}
+{% block javascripts %}{% endblock %}

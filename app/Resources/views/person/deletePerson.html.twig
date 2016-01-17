@@ -1,0 +1,17 @@
+{% extends "base.html.twig" %}
+
+{% block title %}Actividad 62. Delete Person {% endblock %}
+
+
+{% block body %}
+	{# Mostramos los objetos con dump 
+	{{ dump(person) }} #}
+	<hr><hr>
+	{# Mostramos el mensaje success #}
+	La persona <strong>{{ person.name}}</strong> a sido eliminada.
+	<div>
+		<a href="{{ url('listPersonAction')}}">atrás</a>
+	</div>
+	
+{% endblock %}
+{% block javascripts %}{% endblock %}
