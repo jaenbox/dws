@@ -1,6 +1,7 @@
 {% extends "base.html.twig" %}
+{% trans_default_domain 'AppBundle' %}
 
-{% block title %}Actividad 61. Delete Product {% endblock %}
+{% block title %}{{ 'product.delete.title'|trans }} {% endblock %}
 
 {% block body %}
 	{# Mostramos los objetos con dump 
@@ -8,9 +9,11 @@
 	
 	{# Mostramos el mensaje success #}
 	<hr><hr><hr>
-	El producto <strong>{{ product.name}}</strong> a sido eliminada.
+	<h2>{{ 'product.delete.header'|trans }}</h2>
+	
+	{{ 'product.delete.resolution'|trans }} {# El producto <strong>{{ product.name}}</strong> a sido eliminada. #}
 	<div>
-		<a href="{{ url('listActionProduct')}}">atrás</a>
+		{# <a href="{{ url('listActionProduct')}}">atrás</a> #}
 	</div>
 	
 {% endblock %}

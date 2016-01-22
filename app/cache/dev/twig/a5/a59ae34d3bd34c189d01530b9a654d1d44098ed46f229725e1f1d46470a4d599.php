@@ -23,63 +23,107 @@ class __TwigTemplate_ba13b262ed81d836ee0cb837b8210f261ef484efd74fc1f36f0a4bdb6fd
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_335a5c0f6052f2290a1ea888842d691aabc57b641c2cad5c7b0889d5d8371ef8 = $this->env->getExtension("native_profiler");
-        $__internal_335a5c0f6052f2290a1ea888842d691aabc57b641c2cad5c7b0889d5d8371ef8->enter($__internal_335a5c0f6052f2290a1ea888842d691aabc57b641c2cad5c7b0889d5d8371ef8_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "category/newCategory.html.twig"));
+        $__internal_aa366c9730c78979db460f3f535683365b351ef49fe4759fee3d22bc9d8a68ec = $this->env->getExtension("native_profiler");
+        $__internal_aa366c9730c78979db460f3f535683365b351ef49fe4759fee3d22bc9d8a68ec->enter($__internal_aa366c9730c78979db460f3f535683365b351ef49fe4759fee3d22bc9d8a68ec_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "category/newCategory.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_335a5c0f6052f2290a1ea888842d691aabc57b641c2cad5c7b0889d5d8371ef8->leave($__internal_335a5c0f6052f2290a1ea888842d691aabc57b641c2cad5c7b0889d5d8371ef8_prof);
+        $__internal_aa366c9730c78979db460f3f535683365b351ef49fe4759fee3d22bc9d8a68ec->leave($__internal_aa366c9730c78979db460f3f535683365b351ef49fe4759fee3d22bc9d8a68ec_prof);
 
     }
 
-    // line 5
+    // line 6
     public function block_title($context, array $blocks = array())
     {
-        $__internal_809516e81e75487fe3ef0ac4a91a39c97771c9bd21d491b7e8172dd849280642 = $this->env->getExtension("native_profiler");
-        $__internal_809516e81e75487fe3ef0ac4a91a39c97771c9bd21d491b7e8172dd849280642->enter($__internal_809516e81e75487fe3ef0ac4a91a39c97771c9bd21d491b7e8172dd849280642_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
+        $__internal_3c7efd6bd0185b0679f143c5f8bf03472752cd4a50f7ddef530ae323cc6446ed = $this->env->getExtension("native_profiler");
+        $__internal_3c7efd6bd0185b0679f143c5f8bf03472752cd4a50f7ddef530ae323cc6446ed->enter($__internal_3c7efd6bd0185b0679f143c5f8bf03472752cd4a50f7ddef530ae323cc6446ed_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
 
-        echo "Actividad 61. Form new category";
+        echo twig_escape_filter($this->env, $this->env->getExtension('translator')->trans("category.new.title", array(), "AppBundle"), "html", null, true);
         
-        $__internal_809516e81e75487fe3ef0ac4a91a39c97771c9bd21d491b7e8172dd849280642->leave($__internal_809516e81e75487fe3ef0ac4a91a39c97771c9bd21d491b7e8172dd849280642_prof);
+        $__internal_3c7efd6bd0185b0679f143c5f8bf03472752cd4a50f7ddef530ae323cc6446ed->leave($__internal_3c7efd6bd0185b0679f143c5f8bf03472752cd4a50f7ddef530ae323cc6446ed_prof);
 
     }
 
-    // line 8
+    // line 9
     public function block_body($context, array $blocks = array())
     {
-        $__internal_7ad9f1b25af9593d38f1eadf28b10b11c1a3188c0eccb850a127b7da72056e64 = $this->env->getExtension("native_profiler");
-        $__internal_7ad9f1b25af9593d38f1eadf28b10b11c1a3188c0eccb850a127b7da72056e64->enter($__internal_7ad9f1b25af9593d38f1eadf28b10b11c1a3188c0eccb850a127b7da72056e64_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
+        $__internal_6de25c2db25420ae6b32f60fdcb9bec7955ca1347b4f812e5268865be3ae0e5e = $this->env->getExtension("native_profiler");
+        $__internal_6de25c2db25420ae6b32f60fdcb9bec7955ca1347b4f812e5268865be3ae0e5e->enter($__internal_6de25c2db25420ae6b32f60fdcb9bec7955ca1347b4f812e5268865be3ae0e5e_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
 
-        // line 9
+        // line 10
         echo "\t<hr><hr>
-\t<h2>Category</h2>
-\t<form method=\"post\" action=\"#\" ";
+\t<h2>";
         // line 11
-        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), 'enctype');
-        echo ">
-\t\t";
-        // line 12
-        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), 'errors');
+        echo twig_escape_filter($this->env, $this->env->getExtension('translator')->trans("category.new.header", array(), "AppBundle"), "html", null, true);
+        echo "</h2>
+\t<div class=\"row\">
+\t\t\t<div class=\"col-sm-5\">
+\t\t\t\t";
+        // line 14
+        echo         $this->env->getExtension('form')->renderer->renderBlock((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), 'form_start', array("attr" => array("name" => "form", "method" => "post", "action" => "#", "class" => "form-horizontal")));
+        echo "\t\t\t\t
+\t\t\t\t\t<div class=\"form-group\">
+\t\t\t\t\t\t";
+        // line 16
+        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "name", array()), 'label', array("label_attr" => array("class" => "col-sm-2 control-label required")));
         echo "
-\t\t";
-        // line 13
-        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), 'widget');
+\t\t\t\t\t\t<div class=\"col-sm-5\">
+\t\t\t\t\t\t\t";
+        // line 18
+        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "name", array()), 'widget', array("attr" => array("class" => "form-control")));
         echo "
-\t</form>
+\t\t\t\t\t\t</div>
+\t\t\t\t\t\t";
+        // line 20
+        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "name", array()), 'errors');
+        echo "
+\t\t\t\t\t</div> 
+\t\t\t\t\t<div class=\"form-group\">
+\t\t\t\t\t\t<div class=\"col-sm-2\"></div>
+\t\t\t\t\t\t";
+        // line 24
+        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "save", array()), 'label', array("label_attr" => array("class" => "col-sm-2")));
+        echo "
+\t\t\t\t\t\t<div class=\"col-sm-5\">
+\t\t\t\t\t\t\t";
+        // line 26
+        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "save", array()), 'widget', array("attr" => array("class" => "btn-default btn")));
+        echo "
+\t\t\t\t\t\t</div>
+\t\t\t\t\t</div>
+\t\t\t\t\t<div class=\"form-group\">
+\t\t\t\t\t\t<div class=\"col-sm-2\"></div>
+\t\t\t\t\t\t";
+        // line 31
+        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "saveAndAdd", array()), 'label', array("label_attr" => array("class" => "col-sm-2")));
+        echo "
+\t\t\t\t\t\t<div class=\"col-sm-5\">
+\t\t\t\t\t\t\t";
+        // line 33
+        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "saveAndAdd", array()), 'widget', array("attr" => array("class" => "btn-default btn")));
+        echo "
+\t\t\t\t\t\t</div>
+\t\t\t\t\t</div>
+\t\t\t\t";
+        // line 36
+        echo         $this->env->getExtension('form')->renderer->renderBlock((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), 'form_end');
+        echo "
+\t\t\t</div>
+\t</div>
 ";
         
-        $__internal_7ad9f1b25af9593d38f1eadf28b10b11c1a3188c0eccb850a127b7da72056e64->leave($__internal_7ad9f1b25af9593d38f1eadf28b10b11c1a3188c0eccb850a127b7da72056e64_prof);
+        $__internal_6de25c2db25420ae6b32f60fdcb9bec7955ca1347b4f812e5268865be3ae0e5e->leave($__internal_6de25c2db25420ae6b32f60fdcb9bec7955ca1347b4f812e5268865be3ae0e5e_prof);
 
     }
 
-    // line 16
+    // line 40
     public function block_javascripts($context, array $blocks = array())
     {
-        $__internal_014c29023f8db958c53ef618f45a7fee835c510893f4319e2200b2d1537f179d = $this->env->getExtension("native_profiler");
-        $__internal_014c29023f8db958c53ef618f45a7fee835c510893f4319e2200b2d1537f179d->enter($__internal_014c29023f8db958c53ef618f45a7fee835c510893f4319e2200b2d1537f179d_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "javascripts"));
+        $__internal_1f3008bc983dca7ac7828a535b70e73e064f9d0d48e83a7700f94fe90a2fa46b = $this->env->getExtension("native_profiler");
+        $__internal_1f3008bc983dca7ac7828a535b70e73e064f9d0d48e83a7700f94fe90a2fa46b->enter($__internal_1f3008bc983dca7ac7828a535b70e73e064f9d0d48e83a7700f94fe90a2fa46b_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "javascripts"));
 
         
-        $__internal_014c29023f8db958c53ef618f45a7fee835c510893f4319e2200b2d1537f179d->leave($__internal_014c29023f8db958c53ef618f45a7fee835c510893f4319e2200b2d1537f179d_prof);
+        $__internal_1f3008bc983dca7ac7828a535b70e73e064f9d0d48e83a7700f94fe90a2fa46b->leave($__internal_1f3008bc983dca7ac7828a535b70e73e064f9d0d48e83a7700f94fe90a2fa46b_prof);
 
     }
 
@@ -95,22 +139,46 @@ class __TwigTemplate_ba13b262ed81d836ee0cb837b8210f261ef484efd74fc1f36f0a4bdb6fd
 
     public function getDebugInfo()
     {
-        return array (  76 => 16,  66 => 13,  62 => 12,  58 => 11,  54 => 9,  48 => 8,  36 => 5,  11 => 3,);
+        return array (  120 => 40,  109 => 36,  103 => 33,  98 => 31,  90 => 26,  85 => 24,  78 => 20,  73 => 18,  68 => 16,  63 => 14,  57 => 11,  54 => 10,  48 => 9,  36 => 6,  11 => 3,);
     }
 }
 /* {# app/Resources/views/product/newCategory.html.twig #}*/
 /* */
 /* {% extends "base.html.twig" %}*/
+/* {% trans_default_domain 'AppBundle' %}*/
 /* */
-/* {% block title %}Actividad 61. Form new category{% endblock %}*/
+/* {% block title %}{{ 'category.new.title'|trans }}{% endblock %}*/
 /* */
 /* */
 /* {% block body %}*/
 /* 	<hr><hr>*/
-/* 	<h2>Category</h2>*/
-/* 	<form method="post" action="#" {{ form_enctype(form) }}>*/
-/* 		{{ form_errors(form) }}*/
-/* 		{{ form_widget(form) }}*/
-/* 	</form>*/
+/* 	<h2>{{ 'category.new.header'|trans }}</h2>*/
+/* 	<div class="row">*/
+/* 			<div class="col-sm-5">*/
+/* 				{{ form_start(form, {'attr': {'name':'form', 'method':'post', 'action':'#', 'class':'form-horizontal'} }) }}				*/
+/* 					<div class="form-group">*/
+/* 						{{ form_label(form.name, null, {'label_attr': {'class':'col-sm-2 control-label required'} })  }}*/
+/* 						<div class="col-sm-5">*/
+/* 							{{ form_widget(form.name, {'attr': {'class':'form-control'} }) }}*/
+/* 						</div>*/
+/* 						{{ form_errors(form.name) }}*/
+/* 					</div> */
+/* 					<div class="form-group">*/
+/* 						<div class="col-sm-2"></div>*/
+/* 						{{ form_label(form.save, null, {'label_attr': {'class':'col-sm-2'} })  }}*/
+/* 						<div class="col-sm-5">*/
+/* 							{{ form_widget(form.save, {'attr': {'class':'btn-default btn'} }) }}*/
+/* 						</div>*/
+/* 					</div>*/
+/* 					<div class="form-group">*/
+/* 						<div class="col-sm-2"></div>*/
+/* 						{{ form_label(form.saveAndAdd, null, {'label_attr': {'class':'col-sm-2'} })  }}*/
+/* 						<div class="col-sm-5">*/
+/* 							{{ form_widget(form.saveAndAdd, {'attr': {'class':'btn-default btn'} }) }}*/
+/* 						</div>*/
+/* 					</div>*/
+/* 				{{ form_end(form) }}*/
+/* 			</div>*/
+/* 	</div>*/
 /* {% endblock %}*/
 /* {% block javascripts %}{% endblock %}*/

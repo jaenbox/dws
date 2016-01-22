@@ -1,6 +1,7 @@
 {% extends "base.html.twig" %}
+{% trans_default_domain 'AppBundle' %}
 
-{% block title %}Actividad 61. Delete Category {% endblock %}
+{% block title %}{{ 'category.delete.title'|trans }} {% endblock %}
 
 
 {% block body %}
@@ -9,9 +10,10 @@
 	
 	{# Mostramos el mensaje success #}
 	<hr><hr>
-	La category <strong>{{ category.name}}</strong> a sido eliminada.
+	<h2>{{ 'category.delete.header'|trans }}</h2>
+	{{ 'category.delete.resolution'|trans }}
 	<div>
-		<a href="{{ url('listActionCategory')}}">atrás</a>
+		{# <a href="{{ url('listActionCategory')}}">atrás</a> #}
 	</div>
 	
 {% endblock %}

@@ -1,0 +1,20 @@
+#AppBundle/Resources/translation/validation.en.yml
+
+val:
+    notblank: 'This field cannot be empty'
+    age:
+        min: 'The minimum age is {{ limit }} years old'
+        max: 'The maximum height is {{ limit }} years old'
+    date: 'Type a valid date'
+    height:
+        min: 'The minimum height is {{ limit }} cm'
+        max: 'The maximum height is {{ limit }} cm'
+    email: 'The email '{{ value }}' is not valid'
+    phone: 'The phone number is incorrect'
+    descends:
+        min: 'The minimum descends is {{ limit }}'
+        max: 'The maximum descends is {{ limit }}'
+    url: 'The url '{{ value }}' is not valid'
+    card: 'The card number is not valid'
+    iban: 'The IBAN is not valid'
+    invalid: 'This field cannot be empty'

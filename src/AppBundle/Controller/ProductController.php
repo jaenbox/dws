@@ -30,15 +30,16 @@ class ProductController extends Controller {
 		$product = new Product();
 		
 		// creamos el formulario.
-		$form = $this->createFormBuilder($product)
-			->add('name', 'text')
-			->add('description', 'text')
-			->add('price', 'money')
+		$form = $this->createFormBuilder($product, ['translation_domain' => 'AppBundle'])
+			->add('name', 'text', ['label' => 'product.name'])
+			->add('description', 'text', ['label' => 'product.description'])
+			->add('price', 'money', ['label' => 'product.price'])
 			->add('category', 'entity', array(
 										'class' => 'AppBundle:Category',
+										'label' => 'product.category',
 										'choice_label' => 'name'))
-			->add('save', 'submit', array('label' => 'SAVE'))
-			->add('saveAndAdd', 'submit', array('label' => 'SAVE AND ADD'))
+			->add('save', 'submit', array('label' => 'form.save'))
+			->add('saveAndAdd', 'submit', array('label' => 'form.saveAndAdd'))
 			->getForm();
 			
 		
@@ -100,7 +101,7 @@ class ProductController extends Controller {
 		// alamacenamos en la base de datos.
 		$em->flush();
 		
-		return new Response('Objeto '.$product->getName().' y categoria id: '.$category->getId().' '.' creado correctamente.');
+		return $this->Render('product/staticProduct.html.twig', array('product' => $product));
 	}
 	
 	/*

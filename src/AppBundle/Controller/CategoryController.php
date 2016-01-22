@@ -27,10 +27,10 @@ class CategoryController extends Controller {
 		$category = new Category();
 		
 		// creamos el formulario.
-		$form = $this->createFormBuilder($category)
-			->add('name', 'text')
-			->add('save', 'submit', array('label' => 'SAVE'))
-			->add('saveAndAdd', 'submit', array('label' => 'SAVE AND ADD'))
+		$form = $this->createFormBuilder($category, ['translation_domain' => 'AppBundle'])
+			->add('name', 'text', ['label' => 'category.name'])
+			->add('save', 'submit', array('label' => 'form.save'))
+			->add('saveAndAdd', 'submit', array('label' => 'form.saveAndAdd'))
 			->getForm();
 		
 		if($request->isMethod('POST')) {

@@ -1,0 +1,146 @@
+#AppBundle.en.yml 
+
+product:
+    id: 'id'
+    name: 'Name'
+    description: 'Description'
+    price: 'Price'
+    category: 'Category'
+    new:
+        title: 'New product'
+        header: 'New product'
+    show:
+        title: 'Product details'
+        header: 'Product detail'
+    list:
+        title: 'Product list'
+        header: 'Product list'
+    delete:
+        title: 'Deleted product'
+        header: 'Deleted product'
+        resolution: 'The product has been removed'
+    edit:
+        title: 'Editing product'
+        header: 'Editing product'
+    create:
+        title: 'Create static product'
+        header: 'Create estatic product'
+    static:
+        title: 'Product static'
+        header: 'Product static'
+        resolution: 'Product static created: '
+category:
+    id: 'id'
+    name: 'Name'
+    new:
+        title: 'New category'
+        header: 'New category'
+    show:
+        title: 'Category details'
+        header: 'Category details'
+    list:
+        title: 'Category list'
+        header: 'Category list'
+    delete:
+        title: 'Deleted category'
+        header: 'Deleted category'
+        resolution: 'The category has been delete'
+    edit:
+        title: 'Editing category'
+        header: 'Editing category'
+    create:
+        title: 'Create static category'
+        header: 'Create static category'
+    listByCategory:
+        title: 'List products by category'
+        header: 'List products by category'
+    listAllByCategory:
+        title: 'List products by category'
+        header: 'List products by category'
+
+person: 
+    id: 'id' 
+    name: 'Name' 
+    age: 'Age'
+    birthDate: 'Birth Date'
+    height: 'Height'
+    email: 'Email'
+    phone: 'Phone'
+    gender: 'Gender'
+    descends: 'Descends'
+    vehicle: 'Vehicle'
+    preferredLanguage: 'Preferred lenguage'
+    language: 'Lenguage'
+    englishLevel: 'English level'
+    personalWebSite: 'Personal web site'
+    cardNumber: 'Card number'
+    iban: 'IBAN'
+    new:
+        title: 'New person' 
+        header: 'New person'
+    show:
+        title: 'Person details' 
+        header: 'Person details'
+    list:
+        title: 'Person list' 
+        header: 'Person list'
+    delete:
+        title: 'Deleted person'
+        header: 'Deleted person'
+        resolution: 'The person has been deleted'
+    edit:
+        title: 'Editing person ' 
+        header: 'Editing person'
+   
+    create:
+        title: 'Create person by default'
+        header: 'Create person by default'
+menu:
+    home: 'Home'
+    product: 
+        pro: 'Product'
+        new: 'New'
+        static: 'New static'
+        list: 'List'
+    category: 
+        cat: 'Category'
+        new: 'New'
+        list: 'List'
+        listByCategory: 'List product by category'
+    person: 
+        per: 'Person'
+        new: 'New'
+        list: 'List'
+    login: 
+        log: ' Access'
+        access: 'User name'
+        password: 'Password'
+        remember: 'Remember'
+        edit: 'Edit'
+        change: 'Change password'
+        logout: 'Exit'
+        button: 'Login'
+    register: 'Register'
+
+index:
+    header: 'Symfony2'
+    header2: 'User'
+    text1: 'This page shows a working example of the activites carried on in the subject Server Web Development '
+    text2: 'To fully use the application, registration is needed. New registered users will have the role ROLE_APP_USER. '
+    text3: 'Admin user credentials are: admin/admin'
+    text4: 'To fully use the application, registration is needed. New registered users will have the role ROLE_USER. '
+    text5: 'Admin user credentials are: jaen/jaen'
+    
+form:
+    save: 'Save'
+    saveAndAdd: 'save and add'
+    gender:
+        m: 'Male'
+        f: 'Female'
+
+global:
+    edit: 'Edit'
+    delete: 'Delete'
+    placeholder:
+        user: 'User name'
+        password: 'Password'

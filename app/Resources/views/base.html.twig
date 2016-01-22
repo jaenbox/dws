@@ -1,5 +1,6 @@
+{% trans_default_domain 'AppBundle' %}
 <!DOCTYPE html>
-<html>
+<html lang="{{ app.request.locale }}">
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -56,45 +57,45 @@
                 </div>
                 <div id="navbar" class="navbar-collapse collapse">
                     <ul class="nav navbar-nav">
-                        <li class="active"><a href="{{ path('index') }}"><span class="glyphicon glyphicon-home" aria-hidden="true"></span> Home</a></li>                        
+                        <li class="active"><a href="{{ path('index') }}"><span class="glyphicon glyphicon-home" aria-hidden="true"></span> {{ 'menu.home'|trans }}</a></li>                        
                         {% if is_granted('IS_AUTHENTICATED_FULLY')%}
                         <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-                            <span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span> Productos <span class="caret"></span></a>
+                            <span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span> {{ 'menu.product.pro'|trans }} <span class="caret"></span></a>
                             <ul class="dropdown-menu">
                             	{% if is_granted('ROLE_APP_ADMIN') %}
-	                                <li><a href="{{ path('newProductAction') }}">Nuevo</a></li>                          
-	                                <li><a href="{{ path('createStatic') }}">Nuevo estática</a></li>
+	                                <li><a href="{{ path('newProductAction') }}">{{ 'menu.product.new'|trans }}</a></li>                          
+	                                <li><a href="{{ path('createStatic') }}">{{ 'menu.product.static'|trans }}</a></li>
                                     <li role="separator" class="divider"></li>
-                                    <li><a href="{{ path('listActionProduct') }}">Listado</a></li>
+                                    <li><a href="{{ path('listActionProduct') }}">{{ 'menu.product.list'|trans }}</a></li>
                                 {% elseif is_granted('ROLE_USER') %}
-                                    <li><a href="{{ path('listActionProduct') }}">Listado</a></li>
+                                    <li><a href="{{ path('listActionProduct') }}">{{ 'menu.product.list'|trans }}</a></li>
                                 {% endif%}                                                               
                             </ul>
                         </li>
                         <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown"
                             role="button" aria-haspopup="true" aria-expanded="false">
-                            <span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span> Categorías <span class="caret"></span></a>
+                            <span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span> {{ 'menu.category.cat'|trans }} <span class="caret"></span></a>
                             <ul class="dropdown-menu">
                                 {% if is_granted('ROLE_APP_ADMIN' )%}
-                                    <li><a href="{{ path('newCategoryAction')}}"> Nueva</a></li>                          
+                                    <li><a href="{{ path('newCategoryAction')}}">{{ 'menu.category.new'|trans }}</a></li>                          
                                 {% endif %}
                                 <li role="separator" class="divider"></li>                                
-                                <li><a href="{{ path('listActionCategory') }}">Listado</a></li>
-                                <li><a href="{{ path('listAllByCategory') }}">Listado productos por categorías</a></li>
+                                <li><a href="{{ path('listActionCategory') }}">{{ 'menu.category.list'|trans }}</a></li>
+                                <li><a href="{{ path('listAllByCategory') }}">{{ 'menu.category.listByCategory'|trans }}</a></li>
                             </ul>
                         </li>
                         <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown"
                             role="button" aria-haspopup="true" aria-expanded="false">
-                            <span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span> Persona <span class="caret"></span></a>
+                            <span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span> {{ 'menu.person.per'|trans }} <span class="caret"></span></a>
                             <ul class="dropdown-menu">
                                 {% if is_granted('ROLE_APP_ADMIN' )%}
-                                    <li><a href="{{ path('newPersonAction') }}">Nueva</a></li>                                                          
+                                    <li><a href="{{ path('newPersonAction') }}">{{ 'menu.person.new'|trans }}</a></li>                                                          
                                 {% endif %}
                                 <li role="separator" class="divider"></li>                                
-                                <li><a href="{{ path('listPersonAction') }}">Listado</a></li>                                
+                                <li><a href="{{ path('listPersonAction') }}">{{ 'menu.person.list'|trans }}</a></li>                                
                             </ul>
                         </li>
                         {% endif %}                        
@@ -108,29 +109,33 @@
                                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
                                     <span class="glyphicon glyphicon glyphicon-user"></span> {{ app.user.username }}<span class="caret"></span></a>
                                     <ul class="dropdown-menu">
-                                        <li><a href="{{ path('fos_user_profile_edit') }}">Editar</a></li>
-                                        <li><a href="{{ path('fos_user_change_password') }}">Cambio contraseña</a></li>
+                                        <li><a href="{{ path('fos_user_profile_edit') }}">{{ 'menu.login.edit'|trans }}</a></li>
+                                        <li><a href="{{ path('fos_user_change_password') }}">{{ 'menu.login.change'|trans }}</a></li>
                                         <li role="separator" class="divider"></li>
-                                        <li><a class="glyphicon glyphicon-log-out" href="{{ path('fos_user_security_logout') }}">Salir</a></li>
+                                        <li><a class="glyphicon glyphicon-log-out" href="{{ path('fos_user_security_logout') }}">{{ 'menu.login.logout'|trans }}</a></li>
                                     </ul>
                                 </li>
                             {% else %}
                             <li>
                                 <a data-toggle="modal" data-target="#loginModal">
-                                <span class="glyphicon glyphicon-log-in"></span> Acceder</a>
+                                <span class="glyphicon glyphicon-log-in"></span>{{ 'menu.login.log'|trans }}</a>
                             {% endif %}
                             </li>
                         <li>
-                    	   <a href="{{ path('fos_user_registration_register') }}"><span class="glyphicon glyphicon-plus"></span> Registrarse</a>
+                        	{% if is_granted('IS_AUTHENTICATED_FULLY')%}
+            					<!-- No mostramos el boton de acceder.-->
+                    		{% else %}
+                    			<a href="{{ path('fos_user_registration_register') }}"><span class="glyphicon glyphicon-plus"></span>{{ 'menu.register'|trans }}</a>
+                    		{% endif %}
                         </li>
                         <!-- Botón Idioma-->
                         <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown"
                             role="button" aria-haspopup="true" aria-expanded="false">
-                            <span class="glyphicon glyphicon-flag"></span> es <span class="caret"></span></a>
+                            <span class="glyphicon glyphicon-flag"></span> {{ app.request.locale }} <span class="caret"></span></a>
                             <ul class="dropdown-menu">
-                                <li><a href="/">es</a></li>                          
-                                <li><a href="/en">en</a></li>
+                                <li><a href="{{ path(app.request.get('_route'), app.request.get('_route_params')|merge({'_locale': 'es'})) }}">es</a></li>                          
+                        		<li><a href="{{ path(app.request.get('_route'), app.request.get('_route_params')|merge({'_locale': 'en'})) }}">en</a></li>
                             </ul>
                         </li> 
                     </ul>
@@ -146,7 +151,7 @@
                	<div class="modal-content">
                     <div class="modal-header">
                         <button type="button" class="close" data-dismiss="modal">&times;</button>
-						<h4 class="modal-title">Acceder </h4>                        
+						<h4 class="modal-title">{{ 'menu.login.log'|trans }} </h4>                        
                     </div>
                     <div class="modal-body">
                         <form class="form-inline" action="{{ path('fos_user_security_check') }}" method="post" >                    
@@ -154,21 +159,21 @@
                             <input type="hidden" name="_csrf_token" value="{{ csrf_token('authenticate') }}" />
                         
                             <div class="form-group">
-                                <label for="username" class="sr-only">Nombre de usuario</label>
+                                <label for="username" class="sr-only">{{ 'menu.login.access'|trans }}</label>
     							<input type="text" id="username" name="_username" required="required" 
-    								placeholder="Nombre de usuario" class="form-control input-sm"/>
+    								placeholder="{{ 'global.placeholder.user'|trans }}" class="form-control input-sm"/>
                             </div>
                             <div class="form-group">
-                                <label for="password" class="sr-only">Contraseña</label>
+                                <label for="password" class="sr-only">{{ 'menu.login.password'|trans }}</label>
     							<input type="password" id="password" name="_password" required="required"
-    									 placeholder="Contraseña" class="form-control input-sm" />
+    									 placeholder="{{ 'global.placeholder.password'|trans }}" class="form-control input-sm" />
                             </div>
                             <div class="checkbox">
                                 <input type="checkbox" id="remember_me" name="_remember_me" value="on" />
-    							<label for="remember_me">Recordar</label>
+    							<label for="remember_me">{{ 'menu.login.remember'|trans }}</label>
                             </div>
                             <input type="submit" id="_submit" name="_submit"
-                                   value="Entrar" class="btn btn-info btn-sm" />                                                       
+                                   value="{{ 'menu.login.button'|trans }}" class="btn btn-info btn-sm" />                                                       
                         </form>
                     </div>
                 </div>

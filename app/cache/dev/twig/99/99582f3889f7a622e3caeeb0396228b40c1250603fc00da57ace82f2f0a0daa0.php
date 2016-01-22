@@ -23,148 +23,129 @@ class __TwigTemplate_1058d593b189f191cb44284305979e8ba0f5158d4ea7c21bbbcdd5b33dc
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_08b5a8b4f2db26b395e2b25d41c2b09c346559b7f80e728386a917317466d1a6 = $this->env->getExtension("native_profiler");
-        $__internal_08b5a8b4f2db26b395e2b25d41c2b09c346559b7f80e728386a917317466d1a6->enter($__internal_08b5a8b4f2db26b395e2b25d41c2b09c346559b7f80e728386a917317466d1a6_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "category/listActionCategory.html.twig"));
+        $__internal_1aa4546d331bbda13d2b64ecf230289f32aef21283d3f8c2c720bbfb9ffc5048 = $this->env->getExtension("native_profiler");
+        $__internal_1aa4546d331bbda13d2b64ecf230289f32aef21283d3f8c2c720bbfb9ffc5048->enter($__internal_1aa4546d331bbda13d2b64ecf230289f32aef21283d3f8c2c720bbfb9ffc5048_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "category/listActionCategory.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_08b5a8b4f2db26b395e2b25d41c2b09c346559b7f80e728386a917317466d1a6->leave($__internal_08b5a8b4f2db26b395e2b25d41c2b09c346559b7f80e728386a917317466d1a6_prof);
+        $__internal_1aa4546d331bbda13d2b64ecf230289f32aef21283d3f8c2c720bbfb9ffc5048->leave($__internal_1aa4546d331bbda13d2b64ecf230289f32aef21283d3f8c2c720bbfb9ffc5048_prof);
 
     }
 
-    // line 3
+    // line 4
     public function block_title($context, array $blocks = array())
     {
-        $__internal_e4dc163d38be75385c60e426e06898a3fdf47c0410d22b101c109d19981e2941 = $this->env->getExtension("native_profiler");
-        $__internal_e4dc163d38be75385c60e426e06898a3fdf47c0410d22b101c109d19981e2941->enter($__internal_e4dc163d38be75385c60e426e06898a3fdf47c0410d22b101c109d19981e2941_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
+        $__internal_707f6a10768ecb6685ec8d1ffa2f7bbad0af562de537a6e4a08ca341613c8416 = $this->env->getExtension("native_profiler");
+        $__internal_707f6a10768ecb6685ec8d1ffa2f7bbad0af562de537a6e4a08ca341613c8416->enter($__internal_707f6a10768ecb6685ec8d1ffa2f7bbad0af562de537a6e4a08ca341613c8416_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
 
-        echo "Actividad 61. Categorias";
+        echo twig_escape_filter($this->env, $this->env->getExtension('translator')->trans("category.list.title", array(), "AppBundle"), "html", null, true);
         
-        $__internal_e4dc163d38be75385c60e426e06898a3fdf47c0410d22b101c109d19981e2941->leave($__internal_e4dc163d38be75385c60e426e06898a3fdf47c0410d22b101c109d19981e2941_prof);
+        $__internal_707f6a10768ecb6685ec8d1ffa2f7bbad0af562de537a6e4a08ca341613c8416->leave($__internal_707f6a10768ecb6685ec8d1ffa2f7bbad0af562de537a6e4a08ca341613c8416_prof);
 
     }
 
-    // line 5
+    // line 6
     public function block_body($context, array $blocks = array())
     {
-        $__internal_15269405a7b3cf1ebb33b1fa12d9808051e024a15ce8f347591482a013b66711 = $this->env->getExtension("native_profiler");
-        $__internal_15269405a7b3cf1ebb33b1fa12d9808051e024a15ce8f347591482a013b66711->enter($__internal_15269405a7b3cf1ebb33b1fa12d9808051e024a15ce8f347591482a013b66711_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
+        $__internal_6220497a91879d9fe39923d68917179cc936359f2085ce61feee96a693e6eec1 = $this->env->getExtension("native_profiler");
+        $__internal_6220497a91879d9fe39923d68917179cc936359f2085ce61feee96a693e6eec1->enter($__internal_6220497a91879d9fe39923d68917179cc936359f2085ce61feee96a693e6eec1_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
 
-        // line 6
+        // line 7
         echo "\t";
-        // line 8
+        // line 9
         echo "\t
 \t";
-        // line 10
+        // line 11
         echo "\t<hr><hr>
-\t<table class=\"table table-striped\">
-\t";
+\t<h2>";
         // line 12
-        if ($this->env->getExtension('security')->isGranted("ROLE_APP_ADMIN")) {
-            // line 13
-            echo "\t\t<tbody>
+        echo twig_escape_filter($this->env, $this->env->getExtension('translator')->trans("category.list.header", array(), "AppBundle"), "html", null, true);
+        echo "</h2>
+\t<table class=\"table table-striped\">
+\t\t<tbody>
 \t\t\t<thead>
 \t\t\t\t<tr>
-\t\t\t\t\t<td>Id</td>
-\t\t\t\t\t<td>Name</td>
-\t\t\t\t\t<td>Edit</td>
-\t\t\t\t\t<td>Delete</td>
-\t\t\t\t</tr>
+\t\t\t\t\t<td>";
+        // line 17
+        echo twig_escape_filter($this->env, $this->env->getExtension('translator')->trans("category.id", array(), "AppBundle"), "html", null, true);
+        echo "</td>
+\t\t\t\t\t<td>";
+        // line 18
+        echo twig_escape_filter($this->env, $this->env->getExtension('translator')->trans("category.name", array(), "AppBundle"), "html", null, true);
+        echo "</td>
+\t\t\t\t\t";
+        // line 19
+        if ($this->env->getExtension('security')->isGranted("ROLE_APP_ADMIN")) {
+            // line 20
+            echo "\t\t\t\t\t\t<td>";
+            echo twig_escape_filter($this->env, $this->env->getExtension('translator')->trans("global.edit", array(), "AppBundle"), "html", null, true);
+            echo "</td>
+\t\t\t\t\t\t<td>";
+            // line 21
+            echo twig_escape_filter($this->env, $this->env->getExtension('translator')->trans("global.delete", array(), "AppBundle"), "html", null, true);
+            echo "</td>
+\t\t\t\t\t";
+        }
+        // line 23
+        echo "\t\t\t\t</tr>
 \t\t\t</thead>
-\t\t\t<h2>Listado de categorias</h2>\t
 \t\t\t\t";
-            // line 23
-            $context['_parent'] = $context;
-            $context['_seq'] = twig_ensure_traversable((isset($context["categories"]) ? $context["categories"] : $this->getContext($context, "categories")));
-            foreach ($context['_seq'] as $context["_key"] => $context["category"]) {
-                // line 24
-                echo "\t\t\t\t\t<tr>
+        // line 25
+        $context['_parent'] = $context;
+        $context['_seq'] = twig_ensure_traversable((isset($context["categories"]) ? $context["categories"] : $this->getContext($context, "categories")));
+        foreach ($context['_seq'] as $context["_key"] => $context["category"]) {
+            // line 26
+            echo "\t\t\t\t\t<tr>
 \t\t\t\t\t\t<td>";
-                // line 25
-                echo twig_escape_filter($this->env, $this->getAttribute($context["category"], "id", array()), "html", null, true);
-                echo "</td>
+            // line 27
+            echo twig_escape_filter($this->env, $this->getAttribute($context["category"], "id", array()), "html", null, true);
+            echo "</td>
 \t\t\t\t\t\t<td>";
-                // line 26
-                echo twig_escape_filter($this->env, $this->getAttribute($context["category"], "name", array()), "html", null, true);
-                echo "</td>
-\t\t\t\t\t\t<td><a href=\"";
-                // line 27
-                echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("editCategory", array("id" => $this->getAttribute(                // line 30
+            // line 28
+            echo twig_escape_filter($this->env, $this->getAttribute($context["category"], "name", array()), "html", null, true);
+            echo "</td>
+\t\t\t\t\t\t";
+            // line 29
+            if ($this->env->getExtension('security')->isGranted("ROLE_APP_ADMIN")) {
+                // line 30
+                echo "\t\t\t\t\t\t<td><a href=\"";
+                echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("editCategory", array("id" => $this->getAttribute(                // line 33
 $context["category"], "id", array()))), "html", null, true);
-                // line 32
+                // line 35
                 echo "\"><i class=\"fa fa-pencil-square-o\"></i></a></td>
 \t\t\t\t\t\t<td><a href=\"";
-                // line 33
-                echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("deleteAction", array("id" => $this->getAttribute(                // line 36
+                // line 36
+                echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("deleteAction", array("id" => $this->getAttribute(                // line 39
 $context["category"], "id", array()))), "html", null, true);
-                // line 38
+                // line 41
                 echo "\"><i class=\"fa fa-trash fa-lg\"></i></a></td>
-\t\t\t\t\t</tr>
-\t\t\t\t";
+\t\t\t\t\t\t";
             }
-            $_parent = $context['_parent'];
-            unset($context['_seq'], $context['_iterated'], $context['_key'], $context['category'], $context['_parent'], $context['loop']);
-            $context = array_intersect_key($context, $_parent) + $_parent;
-            // line 40
-            echo " 
-\t\t</tbody>
-\t";
-        } elseif ($this->env->getExtension('security')->isGranted("ROLE_USER")) {
             // line 43
-            echo "\t\t<tbody>
-\t\t\t<thead>
-\t\t\t\t<tr>
-\t\t\t\t\t<td>Id</td>
-\t\t\t\t\t<td>Name</td>
-\t\t\t\t</tr>
-\t\t\t</thead>
-\t\t\t<h2>Listado de categorias</h2>\t
+            echo "\t\t\t\t\t</tr>
 \t\t\t\t";
-            // line 51
-            $context['_parent'] = $context;
-            $context['_seq'] = twig_ensure_traversable((isset($context["categories"]) ? $context["categories"] : $this->getContext($context, "categories")));
-            foreach ($context['_seq'] as $context["_key"] => $context["category"]) {
-                // line 52
-                echo "\t\t\t\t\t<tr>
-\t\t\t\t\t\t<td>";
-                // line 53
-                echo twig_escape_filter($this->env, $this->getAttribute($context["category"], "id", array()), "html", null, true);
-                echo "</td>
-\t\t\t\t\t\t<td>";
-                // line 54
-                echo twig_escape_filter($this->env, $this->getAttribute($context["category"], "name", array()), "html", null, true);
-                echo "</td>
-\t\t\t\t\t</tr>
-\t\t\t\t";
-            }
-            $_parent = $context['_parent'];
-            unset($context['_seq'], $context['_iterated'], $context['_key'], $context['category'], $context['_parent'], $context['loop']);
-            $context = array_intersect_key($context, $_parent) + $_parent;
-            // line 56
-            echo " 
-\t\t</tbody>
-\t";
         }
-        // line 59
-        echo "\t</table> 
-\t<a href=\"";
-        // line 60
-        echo $this->env->getExtension('routing')->getUrl("newCategoryAction");
-        echo "\">atrás</a>
-";
+        $_parent = $context['_parent'];
+        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['category'], $context['_parent'], $context['loop']);
+        $context = array_intersect_key($context, $_parent) + $_parent;
+        // line 44
+        echo " 
+\t\t</tbody>
+\t</table> 
+\t";
         
-        $__internal_15269405a7b3cf1ebb33b1fa12d9808051e024a15ce8f347591482a013b66711->leave($__internal_15269405a7b3cf1ebb33b1fa12d9808051e024a15ce8f347591482a013b66711_prof);
+        $__internal_6220497a91879d9fe39923d68917179cc936359f2085ce61feee96a693e6eec1->leave($__internal_6220497a91879d9fe39923d68917179cc936359f2085ce61feee96a693e6eec1_prof);
 
     }
 
-    // line 62
+    // line 49
     public function block_javascripts($context, array $blocks = array())
     {
-        $__internal_fe5e799af33341d369efaceced9cad982568149ad8f848a5220dc74993973e0b = $this->env->getExtension("native_profiler");
-        $__internal_fe5e799af33341d369efaceced9cad982568149ad8f848a5220dc74993973e0b->enter($__internal_fe5e799af33341d369efaceced9cad982568149ad8f848a5220dc74993973e0b_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "javascripts"));
+        $__internal_ac28916f6bb822a74fe2d862de68291f158730c98656ca2d02e5482c79dbd0e3 = $this->env->getExtension("native_profiler");
+        $__internal_ac28916f6bb822a74fe2d862de68291f158730c98656ca2d02e5482c79dbd0e3->enter($__internal_ac28916f6bb822a74fe2d862de68291f158730c98656ca2d02e5482c79dbd0e3_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "javascripts"));
 
         
-        $__internal_fe5e799af33341d369efaceced9cad982568149ad8f848a5220dc74993973e0b->leave($__internal_fe5e799af33341d369efaceced9cad982568149ad8f848a5220dc74993973e0b_prof);
+        $__internal_ac28916f6bb822a74fe2d862de68291f158730c98656ca2d02e5482c79dbd0e3->leave($__internal_ac28916f6bb822a74fe2d862de68291f158730c98656ca2d02e5482c79dbd0e3_prof);
 
     }
 
@@ -180,12 +161,13 @@ $context["category"], "id", array()))), "html", null, true);
 
     public function getDebugInfo()
     {
-        return array (  161 => 62,  152 => 60,  149 => 59,  144 => 56,  135 => 54,  131 => 53,  128 => 52,  124 => 51,  114 => 43,  109 => 40,  101 => 38,  99 => 36,  98 => 33,  95 => 32,  93 => 30,  92 => 27,  88 => 26,  84 => 25,  81 => 24,  77 => 23,  65 => 13,  63 => 12,  59 => 10,  56 => 8,  54 => 6,  48 => 5,  36 => 3,  11 => 1,);
+        return array (  142 => 49,  132 => 44,  125 => 43,  121 => 41,  119 => 39,  118 => 36,  115 => 35,  113 => 33,  111 => 30,  109 => 29,  105 => 28,  101 => 27,  98 => 26,  94 => 25,  90 => 23,  85 => 21,  80 => 20,  78 => 19,  74 => 18,  70 => 17,  62 => 12,  59 => 11,  56 => 9,  54 => 7,  48 => 6,  36 => 4,  11 => 1,);
     }
 }
 /* {% extends "base.html.twig" %}*/
+/* {% trans_default_domain 'AppBundle' %}*/
 /* */
-/* {% block title %}Actividad 61. Categorias{% endblock %}*/
+/* {% block title %}{{ 'category.list.title'|trans }}{% endblock %}*/
 /* */
 /* {% block body %}*/
 /* 	{# Mostramos los objetos con dump*/
@@ -193,22 +175,24 @@ $context["category"], "id", array()))), "html", null, true);
 /* 	*/
 /* 	{# Listamos el producto en una lista. #}*/
 /* 	<hr><hr>*/
+/* 	<h2>{{ 'category.list.header'|trans }}</h2>*/
 /* 	<table class="table table-striped">*/
-/* 	{% if is_granted('ROLE_APP_ADMIN') %}*/
 /* 		<tbody>*/
 /* 			<thead>*/
 /* 				<tr>*/
-/* 					<td>Id</td>*/
-/* 					<td>Name</td>*/
-/* 					<td>Edit</td>*/
-/* 					<td>Delete</td>*/
+/* 					<td>{{ 'category.id'|trans }}</td>*/
+/* 					<td>{{ 'category.name'|trans }}</td>*/
+/* 					{% if is_granted('ROLE_APP_ADMIN') %}*/
+/* 						<td>{{ 'global.edit'|trans }}</td>*/
+/* 						<td>{{ 'global.delete'|trans }}</td>*/
+/* 					{% endif %}*/
 /* 				</tr>*/
 /* 			</thead>*/
-/* 			<h2>Listado de categorias</h2>	*/
 /* 				{% for category in categories%}*/
 /* 					<tr>*/
 /* 						<td>{{ category.id }}</td>*/
 /* 						<td>{{ category.name }}</td>*/
+/* 						{% if is_granted('ROLE_APP_ADMIN') %}*/
 /* 						<td><a href="{{*/
 /* 							path(*/
 /* 								'editCategory',*/
@@ -221,27 +205,11 @@ $context["category"], "id", array()))), "html", null, true);
 /* 								{ 'id': category.id }*/
 /* 							) */
 /* 							}}"><i class="fa fa-trash fa-lg"></i></a></td>*/
+/* 						{% endif %}*/
 /* 					</tr>*/
 /* 				{% endfor %} */
 /* 		</tbody>*/
-/* 	{% elseif is_granted('ROLE_USER') %}*/
-/* 		<tbody>*/
-/* 			<thead>*/
-/* 				<tr>*/
-/* 					<td>Id</td>*/
-/* 					<td>Name</td>*/
-/* 				</tr>*/
-/* 			</thead>*/
-/* 			<h2>Listado de categorias</h2>	*/
-/* 				{% for category in categories%}*/
-/* 					<tr>*/
-/* 						<td>{{ category.id }}</td>*/
-/* 						<td>{{ category.name }}</td>*/
-/* 					</tr>*/
-/* 				{% endfor %} */
-/* 		</tbody>*/
-/* 	{% endif %}*/
 /* 	</table> */
-/* 	<a href="{{ url('newCategoryAction')}}">atrás</a>*/
+/* 	{# <a href="{{ url('newCategoryAction')}}">atrás</a> #}*/
 /* {% endblock %}*/
 /* {% block javascripts %}{% endblock %}*/

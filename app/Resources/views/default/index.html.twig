@@ -1,4 +1,5 @@
 {% extends 'base.html.twig' %}
+{% trans_default_domain 'AppBundle' %}
 
 {% block body %}   
 
@@ -6,14 +7,14 @@
 			<div class="page-header">
 				<hr>
                 <hr>				
-				<h1> Symfony</h1>
+				<h1> {{ 'index.header'|trans }}</h1>
 			</div>
-			<p class="lead"> En esta página podéis ver un ejemplo funcional de las actividades a realizar en el módulo de Desarrollo Web en entorno servidor </p>
-			<h3>Usuario</h3>
-			<p> Para hacer uso completo de la aplicación, será necesario registrarse en la web. Los usuario registrados obtendrán el role ROLE_APP_USER.
-			<p class="text-info"> Para acceder como administrador loggearse como: <em>admin/admin</em> </p>
-			<p> Para hacer uso completo de la aplicación, será necesario registrarse en la web. Los usuario registrados obtendrán el role ROLE_USER.
-			<p class="text-info"> Para acceder como usuario loggearse como: <em>jaen/jaen</em> </p>
+			<p class="lead"> {{ 'index.text1'|trans }} </p>
+			<h3>{{ 'index.header2' |trans }} </h3>
+			<p> {{ 'index.text2'|trans }}
+			<p class="text-info"> {{ 'index.text3' |trans }} </p>
+			<p> {{ 'index.text4' |trans }}
+			<p class="text-info"> {{ 'index.text5' |trans }} </p>
 		</div>
 
 {% endblock %}

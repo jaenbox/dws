@@ -1,18 +1,20 @@
 {% extends "base.html.twig" %}
+{% trans_default_domain 'AppBundle' %}
 
-{% block title %}Actividad 1. Show Products{% endblock %}
+{% block title %}{{ 'product.show.title'|trans }}{% endblock %}
 {% block body %}	
 	{# Listamos el producto en una lista. #}
 	<hr><hr>
-	<table>
+	<h2>{{ 'product.show.header'|trans }}</h2>
+	<table  class="table table-striped">
 		<tbody>
 			<thead>
 				<tr>
-					<td>Id</td>
-					<td>Name</td>
-					<td>Price</td>
-					<td>Description</td>
-					<td>Category</td>
+					<td>{{ 'product.id'|trans }}</td>
+					<td>{{ 'product.name'|trans }}</td>
+					<td>{{ 'product.price'|trans }}(€)</td>
+					<td>{{ 'product.description'|trans }}</td>
+					<td>{{ 'product.category'|trans }}</td>
 				</tr>
 			</thead>
 				<tr>

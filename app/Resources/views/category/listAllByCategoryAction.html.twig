@@ -1,14 +1,15 @@
 {% extends "base.html.twig" %}
+{% trans_default_domain 'AppBundle' %}
 
-{% block title %}Actividad 2. Listar Categorias{% endblock %}
+{% block title %}{{ 'category.listAllByCategory.title'|trans }} {% endblock %}
 
 {% block body %}
 {# Listamos los productos en una lista. #}
 {# {{ dump(categories) }} #}
 	<hr><hr>
-	<h2>Listado de productos</h2>
+	<h2>{{ 'category.listAllByCategory.header'|trans }}</h2>
 	<br>
-	<table>
+	<table  class="table table-striped">
 		<tbody>
 			{% for category in categories %}
 				<thead>

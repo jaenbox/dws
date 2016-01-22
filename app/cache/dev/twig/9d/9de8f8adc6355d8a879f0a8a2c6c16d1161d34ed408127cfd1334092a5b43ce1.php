@@ -18,25 +18,29 @@ class __TwigTemplate_4223a21cddb1541c2c1194d235861d73a5258cbb5b740518188fcfae9c0
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_8f9a98002158ae069b521feda92d0acba601e7e84b9c218e342fcb8891267a63 = $this->env->getExtension("native_profiler");
-        $__internal_8f9a98002158ae069b521feda92d0acba601e7e84b9c218e342fcb8891267a63->enter($__internal_8f9a98002158ae069b521feda92d0acba601e7e84b9c218e342fcb8891267a63_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "base.html.twig"));
+        $__internal_a035f51c3c52a0cbc93b9e34e97f65fac2e56d72d723c611fb78e136b5b39f66 = $this->env->getExtension("native_profiler");
+        $__internal_a035f51c3c52a0cbc93b9e34e97f65fac2e56d72d723c611fb78e136b5b39f66->enter($__internal_a035f51c3c52a0cbc93b9e34e97f65fac2e56d72d723c611fb78e136b5b39f66_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "base.html.twig"));
 
-        // line 1
+        // line 2
         echo "<!DOCTYPE html>
-<html>
+<html lang=\"";
+        // line 3
+        echo twig_escape_filter($this->env, $this->getAttribute($this->getAttribute((isset($context["app"]) ? $context["app"] : $this->getContext($context, "app")), "request", array()), "locale", array()), "html", null, true);
+        echo "\">
     <head>
         <meta charset=\"UTF-8\" />
         <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">
+        <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\">
         <title>
             ";
-        // line 7
+        // line 9
         $this->displayBlock('title', $context, $blocks);
-        // line 8
+        // line 10
         echo "        </title>
 \t\t";
-        // line 9
+        // line 11
         $this->displayBlock('stylesheets', $context, $blocks);
-        // line 41
+        // line 43
         echo "        <link rel=\"icon\" type=\"image/x-icon\" href=\"";
         echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("favicon.ico"), "html", null, true);
         echo "\" />
@@ -57,96 +61,125 @@ class __TwigTemplate_4223a21cddb1541c2c1194d235861d73a5258cbb5b740518188fcfae9c0
                 <div id=\"navbar\" class=\"navbar-collapse collapse\">
                     <ul class=\"nav navbar-nav\">
                         <li class=\"active\"><a href=\"";
-        // line 58
+        // line 60
         echo $this->env->getExtension('routing')->getPath("index");
-        echo "\"><span class=\"glyphicon glyphicon-home\" aria-hidden=\"true\"></span> Home</a></li>                        
+        echo "\"><span class=\"glyphicon glyphicon-home\" aria-hidden=\"true\"></span> ";
+        echo twig_escape_filter($this->env, $this->env->getExtension('translator')->trans("menu.home", array(), "AppBundle"), "html", null, true);
+        echo "</a></li>                        
                         ";
-        // line 59
+        // line 61
         if ($this->env->getExtension('security')->isGranted("IS_AUTHENTICATED_FULLY")) {
-            // line 60
+            // line 62
             echo "                        <li class=\"dropdown\">
                             <a href=\"#\" class=\"dropdown-toggle\" data-toggle=\"dropdown\" role=\"button\" aria-haspopup=\"true\" aria-expanded=\"false\">
-                            <span class=\"glyphicon glyphicon-list-alt\" aria-hidden=\"true\"></span> Productos <span class=\"caret\"></span></a>
+                            <span class=\"glyphicon glyphicon-list-alt\" aria-hidden=\"true\"></span> ";
+            // line 64
+            echo twig_escape_filter($this->env, $this->env->getExtension('translator')->trans("menu.product.pro", array(), "AppBundle"), "html", null, true);
+            echo " <span class=\"caret\"></span></a>
                             <ul class=\"dropdown-menu\">
                             \t";
-            // line 64
+            // line 66
             if ($this->env->getExtension('security')->isGranted("ROLE_APP_ADMIN")) {
-                // line 65
+                // line 67
                 echo "\t                                <li><a href=\"";
                 echo $this->env->getExtension('routing')->getPath("newProductAction");
-                echo "\">Nuevo</a></li>                          
+                echo "\">";
+                echo twig_escape_filter($this->env, $this->env->getExtension('translator')->trans("menu.product.new", array(), "AppBundle"), "html", null, true);
+                echo "</a></li>                          
 \t                                <li><a href=\"";
-                // line 66
+                // line 68
                 echo $this->env->getExtension('routing')->getPath("createStatic");
-                echo "\">Nuevo estática</a></li>
+                echo "\">";
+                echo twig_escape_filter($this->env, $this->env->getExtension('translator')->trans("menu.product.static", array(), "AppBundle"), "html", null, true);
+                echo "</a></li>
                                     <li role=\"separator\" class=\"divider\"></li>
                                     <li><a href=\"";
-                // line 68
+                // line 70
                 echo $this->env->getExtension('routing')->getPath("listActionProduct");
-                echo "\">Listado</a></li>
+                echo "\">";
+                echo twig_escape_filter($this->env, $this->env->getExtension('translator')->trans("menu.product.list", array(), "AppBundle"), "html", null, true);
+                echo "</a></li>
                                 ";
             } elseif ($this->env->getExtension('security')->isGranted("ROLE_USER")) {
-                // line 70
+                // line 72
                 echo "                                    <li><a href=\"";
                 echo $this->env->getExtension('routing')->getPath("listActionProduct");
-                echo "\">Listado</a></li>
+                echo "\">";
+                echo twig_escape_filter($this->env, $this->env->getExtension('translator')->trans("menu.product.list", array(), "AppBundle"), "html", null, true);
+                echo "</a></li>
                                 ";
             }
-            // line 71
+            // line 73
             echo "                                                               
                             </ul>
                         </li>
                         <li class=\"dropdown\">
                             <a href=\"#\" class=\"dropdown-toggle\" data-toggle=\"dropdown\"
                             role=\"button\" aria-haspopup=\"true\" aria-expanded=\"false\">
-                            <span class=\"glyphicon glyphicon-list-alt\" aria-hidden=\"true\"></span> Categorías <span class=\"caret\"></span></a>
+                            <span class=\"glyphicon glyphicon-list-alt\" aria-hidden=\"true\"></span> ";
+            // line 79
+            echo twig_escape_filter($this->env, $this->env->getExtension('translator')->trans("menu.category.cat", array(), "AppBundle"), "html", null, true);
+            echo " <span class=\"caret\"></span></a>
                             <ul class=\"dropdown-menu\">
                                 ";
-            // line 79
+            // line 81
             if ($this->env->getExtension('security')->isGranted("ROLE_APP_ADMIN")) {
-                // line 80
+                // line 82
                 echo "                                    <li><a href=\"";
                 echo $this->env->getExtension('routing')->getPath("newCategoryAction");
-                echo "\"> Nueva</a></li>                          
+                echo "\">";
+                echo twig_escape_filter($this->env, $this->env->getExtension('translator')->trans("menu.category.new", array(), "AppBundle"), "html", null, true);
+                echo "</a></li>                          
                                 ";
             }
-            // line 82
+            // line 84
             echo "                                <li role=\"separator\" class=\"divider\"></li>                                
                                 <li><a href=\"";
-            // line 83
+            // line 85
             echo $this->env->getExtension('routing')->getPath("listActionCategory");
-            echo "\">Listado</a></li>
+            echo "\">";
+            echo twig_escape_filter($this->env, $this->env->getExtension('translator')->trans("menu.category.list", array(), "AppBundle"), "html", null, true);
+            echo "</a></li>
                                 <li><a href=\"";
-            // line 84
+            // line 86
             echo $this->env->getExtension('routing')->getPath("listAllByCategory");
-            echo "\">Listado productos por categorías</a></li>
+            echo "\">";
+            echo twig_escape_filter($this->env, $this->env->getExtension('translator')->trans("menu.category.listByCategory", array(), "AppBundle"), "html", null, true);
+            echo "</a></li>
                             </ul>
                         </li>
                         <li class=\"dropdown\">
                             <a href=\"#\" class=\"dropdown-toggle\" data-toggle=\"dropdown\"
                             role=\"button\" aria-haspopup=\"true\" aria-expanded=\"false\">
-                            <span class=\"glyphicon glyphicon-list-alt\" aria-hidden=\"true\"></span> Persona <span class=\"caret\"></span></a>
+                            <span class=\"glyphicon glyphicon-list-alt\" aria-hidden=\"true\"></span> ";
+            // line 92
+            echo twig_escape_filter($this->env, $this->env->getExtension('translator')->trans("menu.person.per", array(), "AppBundle"), "html", null, true);
+            echo " <span class=\"caret\"></span></a>
                             <ul class=\"dropdown-menu\">
                                 ";
-            // line 92
+            // line 94
             if ($this->env->getExtension('security')->isGranted("ROLE_APP_ADMIN")) {
-                // line 93
+                // line 95
                 echo "                                    <li><a href=\"";
                 echo $this->env->getExtension('routing')->getPath("newPersonAction");
-                echo "\">Nueva</a></li>                                                          
+                echo "\">";
+                echo twig_escape_filter($this->env, $this->env->getExtension('translator')->trans("menu.person.new", array(), "AppBundle"), "html", null, true);
+                echo "</a></li>                                                          
                                 ";
             }
-            // line 95
+            // line 97
             echo "                                <li role=\"separator\" class=\"divider\"></li>                                
                                 <li><a href=\"";
-            // line 96
+            // line 98
             echo $this->env->getExtension('routing')->getPath("listPersonAction");
-            echo "\">Listado</a></li>                                
+            echo "\">";
+            echo twig_escape_filter($this->env, $this->env->getExtension('translator')->trans("menu.person.list", array(), "AppBundle"), "html", null, true);
+            echo "</a></li>                                
                             </ul>
                         </li>
                         ";
         }
-        // line 99
+        // line 101
         echo "                        
                     </ul>
                     
@@ -154,55 +187,85 @@ class __TwigTemplate_4223a21cddb1541c2c1194d235861d73a5258cbb5b740518188fcfae9c0
                     <ul class=\"nav navbar-nav navbar-right\">
                             <!-- Dependiendo si estamos registrados o no, nos aparecerá nuestro usuario con opciones o el boton acceder.-->
                             ";
-        // line 105
+        // line 107
         if ($this->env->getExtension('security')->isGranted("IS_AUTHENTICATED_FULLY")) {
-            // line 106
+            // line 108
             echo "                                <li class=\"dropdown\">
                                     <a href=\"#\" class=\"dropdown-toggle\" data-toggle=\"dropdown\" role=\"button\" aria-haspopup=\"true\" aria-expanded=\"false\">
                                     <span class=\"glyphicon glyphicon glyphicon-user\"></span> ";
-            // line 108
+            // line 110
             echo twig_escape_filter($this->env, $this->getAttribute($this->getAttribute((isset($context["app"]) ? $context["app"] : $this->getContext($context, "app")), "user", array()), "username", array()), "html", null, true);
             echo "<span class=\"caret\"></span></a>
                                     <ul class=\"dropdown-menu\">
                                         <li><a href=\"";
-            // line 110
+            // line 112
             echo $this->env->getExtension('routing')->getPath("fos_user_profile_edit");
-            echo "\">Editar</a></li>
+            echo "\">";
+            echo twig_escape_filter($this->env, $this->env->getExtension('translator')->trans("menu.login.edit", array(), "AppBundle"), "html", null, true);
+            echo "</a></li>
                                         <li><a href=\"";
-            // line 111
+            // line 113
             echo $this->env->getExtension('routing')->getPath("fos_user_change_password");
-            echo "\">Cambio contraseña</a></li>
+            echo "\">";
+            echo twig_escape_filter($this->env, $this->env->getExtension('translator')->trans("menu.login.change", array(), "AppBundle"), "html", null, true);
+            echo "</a></li>
                                         <li role=\"separator\" class=\"divider\"></li>
                                         <li><a class=\"glyphicon glyphicon-log-out\" href=\"";
-            // line 113
+            // line 115
             echo $this->env->getExtension('routing')->getPath("fos_user_security_logout");
-            echo "\">Salir</a></li>
+            echo "\">";
+            echo twig_escape_filter($this->env, $this->env->getExtension('translator')->trans("menu.login.logout", array(), "AppBundle"), "html", null, true);
+            echo "</a></li>
                                     </ul>
                                 </li>
                             ";
         } else {
-            // line 117
+            // line 119
             echo "                            <li>
                                 <a data-toggle=\"modal\" data-target=\"#loginModal\">
-                                <span class=\"glyphicon glyphicon-log-in\"></span> Acceder</a>
+                                <span class=\"glyphicon glyphicon-log-in\"></span>";
+            // line 121
+            echo twig_escape_filter($this->env, $this->env->getExtension('translator')->trans("menu.login.log", array(), "AppBundle"), "html", null, true);
+            echo "</a>
                             ";
         }
-        // line 121
+        // line 123
         echo "                            </li>
                         <li>
-                    \t   <a href=\"";
-        // line 123
-        echo $this->env->getExtension('routing')->getPath("fos_user_registration_register");
-        echo "\"><span class=\"glyphicon glyphicon-plus\"></span> Registrarse</a>
-                        </li>
+                        \t";
+        // line 125
+        if ($this->env->getExtension('security')->isGranted("IS_AUTHENTICATED_FULLY")) {
+            // line 126
+            echo "            \t\t\t\t\t<!-- No mostramos el boton de acceder.-->
+                    \t\t";
+        } else {
+            // line 128
+            echo "                    \t\t\t<a href=\"";
+            echo $this->env->getExtension('routing')->getPath("fos_user_registration_register");
+            echo "\"><span class=\"glyphicon glyphicon-plus\"></span>";
+            echo twig_escape_filter($this->env, $this->env->getExtension('translator')->trans("menu.register", array(), "AppBundle"), "html", null, true);
+            echo "</a>
+                    \t\t";
+        }
+        // line 130
+        echo "                        </li>
                         <!-- Botón Idioma-->
                         <li class=\"dropdown\">
                             <a href=\"#\" class=\"dropdown-toggle\" data-toggle=\"dropdown\"
                             role=\"button\" aria-haspopup=\"true\" aria-expanded=\"false\">
-                            <span class=\"glyphicon glyphicon-flag\"></span> es <span class=\"caret\"></span></a>
+                            <span class=\"glyphicon glyphicon-flag\"></span> ";
+        // line 135
+        echo twig_escape_filter($this->env, $this->getAttribute($this->getAttribute((isset($context["app"]) ? $context["app"] : $this->getContext($context, "app")), "request", array()), "locale", array()), "html", null, true);
+        echo " <span class=\"caret\"></span></a>
                             <ul class=\"dropdown-menu\">
-                                <li><a href=\"/\">es</a></li>                          
-                                <li><a href=\"/en\">en</a></li>
+                                <li><a href=\"";
+        // line 137
+        echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath($this->getAttribute($this->getAttribute((isset($context["app"]) ? $context["app"] : $this->getContext($context, "app")), "request", array()), "get", array(0 => "_route"), "method"), twig_array_merge($this->getAttribute($this->getAttribute((isset($context["app"]) ? $context["app"] : $this->getContext($context, "app")), "request", array()), "get", array(0 => "_route_params"), "method"), array("_locale" => "es"))), "html", null, true);
+        echo "\">es</a></li>                          
+                        \t\t<li><a href=\"";
+        // line 138
+        echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath($this->getAttribute($this->getAttribute((isset($context["app"]) ? $context["app"] : $this->getContext($context, "app")), "request", array()), "get", array(0 => "_route"), "method"), twig_array_merge($this->getAttribute($this->getAttribute((isset($context["app"]) ? $context["app"] : $this->getContext($context, "app")), "request", array()), "get", array(0 => "_route_params"), "method"), array("_locale" => "en"))), "html", null, true);
+        echo "\">en</a></li>
                             </ul>
                         </li> 
                     </ul>
@@ -218,35 +281,56 @@ class __TwigTemplate_4223a21cddb1541c2c1194d235861d73a5258cbb5b740518188fcfae9c0
                \t<div class=\"modal-content\">
                     <div class=\"modal-header\">
                         <button type=\"button\" class=\"close\" data-dismiss=\"modal\">&times;</button>
-\t\t\t\t\t\t<h4 class=\"modal-title\">Acceder </h4>                        
+\t\t\t\t\t\t<h4 class=\"modal-title\">";
+        // line 154
+        echo twig_escape_filter($this->env, $this->env->getExtension('translator')->trans("menu.login.log", array(), "AppBundle"), "html", null, true);
+        echo " </h4>                        
                     </div>
                     <div class=\"modal-body\">
                         <form class=\"form-inline\" action=\"";
-        // line 151
+        // line 157
         echo $this->env->getExtension('routing')->getPath("fos_user_security_check");
         echo "\" method=\"post\" >                    
 \t\t\t\t\t\t
                             <input type=\"hidden\" name=\"_csrf_token\" value=\"";
-        // line 153
+        // line 159
         echo twig_escape_filter($this->env, $this->env->getExtension('form')->renderCsrfToken("authenticate"), "html", null, true);
         echo "\" />
                         
                             <div class=\"form-group\">
-                                <label for=\"username\" class=\"sr-only\">Nombre de usuario</label>
+                                <label for=\"username\" class=\"sr-only\">";
+        // line 162
+        echo twig_escape_filter($this->env, $this->env->getExtension('translator')->trans("menu.login.access", array(), "AppBundle"), "html", null, true);
+        echo "</label>
     \t\t\t\t\t\t\t<input type=\"text\" id=\"username\" name=\"_username\" required=\"required\" 
-    \t\t\t\t\t\t\t\tplaceholder=\"Nombre de usuario\" class=\"form-control input-sm\"/>
+    \t\t\t\t\t\t\t\tplaceholder=\"";
+        // line 164
+        echo twig_escape_filter($this->env, $this->env->getExtension('translator')->trans("global.placeholder.user", array(), "AppBundle"), "html", null, true);
+        echo "\" class=\"form-control input-sm\"/>
                             </div>
                             <div class=\"form-group\">
-                                <label for=\"password\" class=\"sr-only\">Contraseña</label>
+                                <label for=\"password\" class=\"sr-only\">";
+        // line 167
+        echo twig_escape_filter($this->env, $this->env->getExtension('translator')->trans("menu.login.password", array(), "AppBundle"), "html", null, true);
+        echo "</label>
     \t\t\t\t\t\t\t<input type=\"password\" id=\"password\" name=\"_password\" required=\"required\"
-    \t\t\t\t\t\t\t\t\t placeholder=\"Contraseña\" class=\"form-control input-sm\" />
+    \t\t\t\t\t\t\t\t\t placeholder=\"";
+        // line 169
+        echo twig_escape_filter($this->env, $this->env->getExtension('translator')->trans("global.placeholder.password", array(), "AppBundle"), "html", null, true);
+        echo "\" class=\"form-control input-sm\" />
                             </div>
                             <div class=\"checkbox\">
                                 <input type=\"checkbox\" id=\"remember_me\" name=\"_remember_me\" value=\"on\" />
-    \t\t\t\t\t\t\t<label for=\"remember_me\">Recordar</label>
+    \t\t\t\t\t\t\t<label for=\"remember_me\">";
+        // line 173
+        echo twig_escape_filter($this->env, $this->env->getExtension('translator')->trans("menu.login.remember", array(), "AppBundle"), "html", null, true);
+        echo "</label>
                             </div>
                             <input type=\"submit\" id=\"_submit\" name=\"_submit\"
-                                   value=\"Entrar\" class=\"btn btn-info btn-sm\" />                                                       
+                                   value=\"";
+        // line 176
+        echo twig_escape_filter($this->env, $this->env->getExtension('translator')->trans("menu.login.button", array(), "AppBundle"), "html", null, true);
+        echo "\" class=\"btn btn-info btn-sm\" />                                                       
                         </form>
                     </div>
                 </div>
@@ -255,36 +339,36 @@ class __TwigTemplate_4223a21cddb1541c2c1194d235861d73a5258cbb5b740518188fcfae9c0
         <script src=\"https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js\"></script>
         <script src=\"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js\"></script>
         ";
-        // line 178
+        // line 184
         $this->displayBlock('body', $context, $blocks);
-        // line 181
+        // line 187
         echo "    </body>
 </html>
 ";
         
-        $__internal_8f9a98002158ae069b521feda92d0acba601e7e84b9c218e342fcb8891267a63->leave($__internal_8f9a98002158ae069b521feda92d0acba601e7e84b9c218e342fcb8891267a63_prof);
-
-    }
-
-    // line 7
-    public function block_title($context, array $blocks = array())
-    {
-        $__internal_5c3fac2dbda9a19df15b1b68bb7c389947b7012f6b9b2d3e5ca7e2100ca7df37 = $this->env->getExtension("native_profiler");
-        $__internal_5c3fac2dbda9a19df15b1b68bb7c389947b7012f6b9b2d3e5ca7e2100ca7df37->enter($__internal_5c3fac2dbda9a19df15b1b68bb7c389947b7012f6b9b2d3e5ca7e2100ca7df37_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
-
-        echo "David Jaén";
-        
-        $__internal_5c3fac2dbda9a19df15b1b68bb7c389947b7012f6b9b2d3e5ca7e2100ca7df37->leave($__internal_5c3fac2dbda9a19df15b1b68bb7c389947b7012f6b9b2d3e5ca7e2100ca7df37_prof);
+        $__internal_a035f51c3c52a0cbc93b9e34e97f65fac2e56d72d723c611fb78e136b5b39f66->leave($__internal_a035f51c3c52a0cbc93b9e34e97f65fac2e56d72d723c611fb78e136b5b39f66_prof);
 
     }
 
     // line 9
+    public function block_title($context, array $blocks = array())
+    {
+        $__internal_20797345434d48709e719f522ab71f562c9e363e0a05081f766fdd26850f3f4e = $this->env->getExtension("native_profiler");
+        $__internal_20797345434d48709e719f522ab71f562c9e363e0a05081f766fdd26850f3f4e->enter($__internal_20797345434d48709e719f522ab71f562c9e363e0a05081f766fdd26850f3f4e_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
+
+        echo "David Jaén";
+        
+        $__internal_20797345434d48709e719f522ab71f562c9e363e0a05081f766fdd26850f3f4e->leave($__internal_20797345434d48709e719f522ab71f562c9e363e0a05081f766fdd26850f3f4e_prof);
+
+    }
+
+    // line 11
     public function block_stylesheets($context, array $blocks = array())
     {
-        $__internal_a3c37440f68e723eeeb2948873f6ea018f8c637cb9e37b9481cc021940112bc0 = $this->env->getExtension("native_profiler");
-        $__internal_a3c37440f68e723eeeb2948873f6ea018f8c637cb9e37b9481cc021940112bc0->enter($__internal_a3c37440f68e723eeeb2948873f6ea018f8c637cb9e37b9481cc021940112bc0_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "stylesheets"));
+        $__internal_a321236904920011fa340f9482a2393d8f4d93e9fe1c33574e887710bb4ffac8 = $this->env->getExtension("native_profiler");
+        $__internal_a321236904920011fa340f9482a2393d8f4d93e9fe1c33574e887710bb4ffac8->enter($__internal_a321236904920011fa340f9482a2393d8f4d93e9fe1c33574e887710bb4ffac8_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "stylesheets"));
 
-        // line 10
+        // line 12
         echo "        <!-- Bootstrap -->
 \t        <link rel=\"stylesheet\" href=\"https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css\" />
 \t        <link rel=\"stylesheet\" href=\"https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css\"/>
@@ -317,21 +401,21 @@ class __TwigTemplate_4223a21cddb1541c2c1194d235861d73a5258cbb5b740518188fcfae9c0
             
     \t";
         
-        $__internal_a3c37440f68e723eeeb2948873f6ea018f8c637cb9e37b9481cc021940112bc0->leave($__internal_a3c37440f68e723eeeb2948873f6ea018f8c637cb9e37b9481cc021940112bc0_prof);
+        $__internal_a321236904920011fa340f9482a2393d8f4d93e9fe1c33574e887710bb4ffac8->leave($__internal_a321236904920011fa340f9482a2393d8f4d93e9fe1c33574e887710bb4ffac8_prof);
 
     }
 
-    // line 178
+    // line 184
     public function block_body($context, array $blocks = array())
     {
-        $__internal_ba42664c9185f963ff21ca5b6a7162dbae826aa183b01a597c2470eadfc3e4de = $this->env->getExtension("native_profiler");
-        $__internal_ba42664c9185f963ff21ca5b6a7162dbae826aa183b01a597c2470eadfc3e4de->enter($__internal_ba42664c9185f963ff21ca5b6a7162dbae826aa183b01a597c2470eadfc3e4de_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
+        $__internal_3da62f953fdc5407fc7c5f0150d7fad4a4e32d4e8cd49d892b36e292121c6cf1 = $this->env->getExtension("native_profiler");
+        $__internal_3da62f953fdc5407fc7c5f0150d7fad4a4e32d4e8cd49d892b36e292121c6cf1->enter($__internal_3da62f953fdc5407fc7c5f0150d7fad4a4e32d4e8cd49d892b36e292121c6cf1_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
 
-        // line 179
+        // line 185
         echo "        \t
         ";
         
-        $__internal_ba42664c9185f963ff21ca5b6a7162dbae826aa183b01a597c2470eadfc3e4de->leave($__internal_ba42664c9185f963ff21ca5b6a7162dbae826aa183b01a597c2470eadfc3e4de_prof);
+        $__internal_3da62f953fdc5407fc7c5f0150d7fad4a4e32d4e8cd49d892b36e292121c6cf1->leave($__internal_3da62f953fdc5407fc7c5f0150d7fad4a4e32d4e8cd49d892b36e292121c6cf1_prof);
 
     }
 
@@ -347,14 +431,16 @@ class __TwigTemplate_4223a21cddb1541c2c1194d235861d73a5258cbb5b740518188fcfae9c0
 
     public function getDebugInfo()
     {
-        return array (  331 => 179,  325 => 178,  288 => 10,  282 => 9,  270 => 7,  261 => 181,  259 => 178,  231 => 153,  226 => 151,  195 => 123,  191 => 121,  185 => 117,  178 => 113,  173 => 111,  169 => 110,  164 => 108,  160 => 106,  158 => 105,  150 => 99,  143 => 96,  140 => 95,  134 => 93,  132 => 92,  121 => 84,  117 => 83,  114 => 82,  108 => 80,  106 => 79,  96 => 71,  90 => 70,  85 => 68,  80 => 66,  75 => 65,  73 => 64,  67 => 60,  65 => 59,  61 => 58,  40 => 41,  38 => 9,  35 => 8,  33 => 7,  25 => 1,);
+        return array (  415 => 185,  409 => 184,  372 => 12,  366 => 11,  354 => 9,  345 => 187,  343 => 184,  332 => 176,  326 => 173,  319 => 169,  314 => 167,  308 => 164,  303 => 162,  297 => 159,  292 => 157,  286 => 154,  267 => 138,  263 => 137,  258 => 135,  251 => 130,  243 => 128,  239 => 126,  237 => 125,  233 => 123,  228 => 121,  224 => 119,  215 => 115,  208 => 113,  202 => 112,  197 => 110,  193 => 108,  191 => 107,  183 => 101,  174 => 98,  171 => 97,  163 => 95,  161 => 94,  156 => 92,  145 => 86,  139 => 85,  136 => 84,  128 => 82,  126 => 81,  121 => 79,  113 => 73,  105 => 72,  98 => 70,  91 => 68,  84 => 67,  82 => 66,  77 => 64,  73 => 62,  71 => 61,  65 => 60,  44 => 43,  42 => 11,  39 => 10,  37 => 9,  28 => 3,  25 => 2,);
     }
 }
+/* {% trans_default_domain 'AppBundle' %}*/
 /* <!DOCTYPE html>*/
-/* <html>*/
+/* <html lang="{{ app.request.locale }}">*/
 /*     <head>*/
 /*         <meta charset="UTF-8" />*/
 /*         <meta name="viewport" content="width=device-width, initial-scale=1">*/
+/*         <meta http-equiv="X-UA-Compatible" content="IE=edge">*/
 /*         <title>*/
 /*             {% block title %}David Jaén{% endblock %}*/
 /*         </title>*/
@@ -407,45 +493,45 @@ class __TwigTemplate_4223a21cddb1541c2c1194d235861d73a5258cbb5b740518188fcfae9c0
 /*                 </div>*/
 /*                 <div id="navbar" class="navbar-collapse collapse">*/
 /*                     <ul class="nav navbar-nav">*/
-/*                         <li class="active"><a href="{{ path('index') }}"><span class="glyphicon glyphicon-home" aria-hidden="true"></span> Home</a></li>                        */
+/*                         <li class="active"><a href="{{ path('index') }}"><span class="glyphicon glyphicon-home" aria-hidden="true"></span> {{ 'menu.home'|trans }}</a></li>                        */
 /*                         {% if is_granted('IS_AUTHENTICATED_FULLY')%}*/
 /*                         <li class="dropdown">*/
 /*                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">*/
-/*                             <span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span> Productos <span class="caret"></span></a>*/
+/*                             <span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span> {{ 'menu.product.pro'|trans }} <span class="caret"></span></a>*/
 /*                             <ul class="dropdown-menu">*/
 /*                             	{% if is_granted('ROLE_APP_ADMIN') %}*/
-/* 	                                <li><a href="{{ path('newProductAction') }}">Nuevo</a></li>                          */
-/* 	                                <li><a href="{{ path('createStatic') }}">Nuevo estática</a></li>*/
+/* 	                                <li><a href="{{ path('newProductAction') }}">{{ 'menu.product.new'|trans }}</a></li>                          */
+/* 	                                <li><a href="{{ path('createStatic') }}">{{ 'menu.product.static'|trans }}</a></li>*/
 /*                                     <li role="separator" class="divider"></li>*/
-/*                                     <li><a href="{{ path('listActionProduct') }}">Listado</a></li>*/
+/*                                     <li><a href="{{ path('listActionProduct') }}">{{ 'menu.product.list'|trans }}</a></li>*/
 /*                                 {% elseif is_granted('ROLE_USER') %}*/
-/*                                     <li><a href="{{ path('listActionProduct') }}">Listado</a></li>*/
+/*                                     <li><a href="{{ path('listActionProduct') }}">{{ 'menu.product.list'|trans }}</a></li>*/
 /*                                 {% endif%}                                                               */
 /*                             </ul>*/
 /*                         </li>*/
 /*                         <li class="dropdown">*/
 /*                             <a href="#" class="dropdown-toggle" data-toggle="dropdown"*/
 /*                             role="button" aria-haspopup="true" aria-expanded="false">*/
-/*                             <span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span> Categorías <span class="caret"></span></a>*/
+/*                             <span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span> {{ 'menu.category.cat'|trans }} <span class="caret"></span></a>*/
 /*                             <ul class="dropdown-menu">*/
 /*                                 {% if is_granted('ROLE_APP_ADMIN' )%}*/
-/*                                     <li><a href="{{ path('newCategoryAction')}}"> Nueva</a></li>                          */
+/*                                     <li><a href="{{ path('newCategoryAction')}}">{{ 'menu.category.new'|trans }}</a></li>                          */
 /*                                 {% endif %}*/
 /*                                 <li role="separator" class="divider"></li>                                */
-/*                                 <li><a href="{{ path('listActionCategory') }}">Listado</a></li>*/
-/*                                 <li><a href="{{ path('listAllByCategory') }}">Listado productos por categorías</a></li>*/
+/*                                 <li><a href="{{ path('listActionCategory') }}">{{ 'menu.category.list'|trans }}</a></li>*/
+/*                                 <li><a href="{{ path('listAllByCategory') }}">{{ 'menu.category.listByCategory'|trans }}</a></li>*/
 /*                             </ul>*/
 /*                         </li>*/
 /*                         <li class="dropdown">*/
 /*                             <a href="#" class="dropdown-toggle" data-toggle="dropdown"*/
 /*                             role="button" aria-haspopup="true" aria-expanded="false">*/
-/*                             <span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span> Persona <span class="caret"></span></a>*/
+/*                             <span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span> {{ 'menu.person.per'|trans }} <span class="caret"></span></a>*/
 /*                             <ul class="dropdown-menu">*/
 /*                                 {% if is_granted('ROLE_APP_ADMIN' )%}*/
-/*                                     <li><a href="{{ path('newPersonAction') }}">Nueva</a></li>                                                          */
+/*                                     <li><a href="{{ path('newPersonAction') }}">{{ 'menu.person.new'|trans }}</a></li>                                                          */
 /*                                 {% endif %}*/
 /*                                 <li role="separator" class="divider"></li>                                */
-/*                                 <li><a href="{{ path('listPersonAction') }}">Listado</a></li>                                */
+/*                                 <li><a href="{{ path('listPersonAction') }}">{{ 'menu.person.list'|trans }}</a></li>                                */
 /*                             </ul>*/
 /*                         </li>*/
 /*                         {% endif %}                        */
@@ -459,29 +545,33 @@ class __TwigTemplate_4223a21cddb1541c2c1194d235861d73a5258cbb5b740518188fcfae9c0
 /*                                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">*/
 /*                                     <span class="glyphicon glyphicon glyphicon-user"></span> {{ app.user.username }}<span class="caret"></span></a>*/
 /*                                     <ul class="dropdown-menu">*/
-/*                                         <li><a href="{{ path('fos_user_profile_edit') }}">Editar</a></li>*/
-/*                                         <li><a href="{{ path('fos_user_change_password') }}">Cambio contraseña</a></li>*/
+/*                                         <li><a href="{{ path('fos_user_profile_edit') }}">{{ 'menu.login.edit'|trans }}</a></li>*/
+/*                                         <li><a href="{{ path('fos_user_change_password') }}">{{ 'menu.login.change'|trans }}</a></li>*/
 /*                                         <li role="separator" class="divider"></li>*/
-/*                                         <li><a class="glyphicon glyphicon-log-out" href="{{ path('fos_user_security_logout') }}">Salir</a></li>*/
+/*                                         <li><a class="glyphicon glyphicon-log-out" href="{{ path('fos_user_security_logout') }}">{{ 'menu.login.logout'|trans }}</a></li>*/
 /*                                     </ul>*/
 /*                                 </li>*/
 /*                             {% else %}*/
 /*                             <li>*/
 /*                                 <a data-toggle="modal" data-target="#loginModal">*/
-/*                                 <span class="glyphicon glyphicon-log-in"></span> Acceder</a>*/
+/*                                 <span class="glyphicon glyphicon-log-in"></span>{{ 'menu.login.log'|trans }}</a>*/
 /*                             {% endif %}*/
 /*                             </li>*/
 /*                         <li>*/
-/*                     	   <a href="{{ path('fos_user_registration_register') }}"><span class="glyphicon glyphicon-plus"></span> Registrarse</a>*/
+/*                         	{% if is_granted('IS_AUTHENTICATED_FULLY')%}*/
+/*             					<!-- No mostramos el boton de acceder.-->*/
+/*                     		{% else %}*/
+/*                     			<a href="{{ path('fos_user_registration_register') }}"><span class="glyphicon glyphicon-plus"></span>{{ 'menu.register'|trans }}</a>*/
+/*                     		{% endif %}*/
 /*                         </li>*/
 /*                         <!-- Botón Idioma-->*/
 /*                         <li class="dropdown">*/
 /*                             <a href="#" class="dropdown-toggle" data-toggle="dropdown"*/
 /*                             role="button" aria-haspopup="true" aria-expanded="false">*/
-/*                             <span class="glyphicon glyphicon-flag"></span> es <span class="caret"></span></a>*/
+/*                             <span class="glyphicon glyphicon-flag"></span> {{ app.request.locale }} <span class="caret"></span></a>*/
 /*                             <ul class="dropdown-menu">*/
-/*                                 <li><a href="/">es</a></li>                          */
-/*                                 <li><a href="/en">en</a></li>*/
+/*                                 <li><a href="{{ path(app.request.get('_route'), app.request.get('_route_params')|merge({'_locale': 'es'})) }}">es</a></li>                          */
+/*                         		<li><a href="{{ path(app.request.get('_route'), app.request.get('_route_params')|merge({'_locale': 'en'})) }}">en</a></li>*/
 /*                             </ul>*/
 /*                         </li> */
 /*                     </ul>*/
@@ -497,7 +587,7 @@ class __TwigTemplate_4223a21cddb1541c2c1194d235861d73a5258cbb5b740518188fcfae9c0
 /*                	<div class="modal-content">*/
 /*                     <div class="modal-header">*/
 /*                         <button type="button" class="close" data-dismiss="modal">&times;</button>*/
-/* 						<h4 class="modal-title">Acceder </h4>                        */
+/* 						<h4 class="modal-title">{{ 'menu.login.log'|trans }} </h4>                        */
 /*                     </div>*/
 /*                     <div class="modal-body">*/
 /*                         <form class="form-inline" action="{{ path('fos_user_security_check') }}" method="post" >                    */
@@ -505,21 +595,21 @@ class __TwigTemplate_4223a21cddb1541c2c1194d235861d73a5258cbb5b740518188fcfae9c0
 /*                             <input type="hidden" name="_csrf_token" value="{{ csrf_token('authenticate') }}" />*/
 /*                         */
 /*                             <div class="form-group">*/
-/*                                 <label for="username" class="sr-only">Nombre de usuario</label>*/
+/*                                 <label for="username" class="sr-only">{{ 'menu.login.access'|trans }}</label>*/
 /*     							<input type="text" id="username" name="_username" required="required" */
-/*     								placeholder="Nombre de usuario" class="form-control input-sm"/>*/
+/*     								placeholder="{{ 'global.placeholder.user'|trans }}" class="form-control input-sm"/>*/
 /*                             </div>*/
 /*                             <div class="form-group">*/
-/*                                 <label for="password" class="sr-only">Contraseña</label>*/
+/*                                 <label for="password" class="sr-only">{{ 'menu.login.password'|trans }}</label>*/
 /*     							<input type="password" id="password" name="_password" required="required"*/
-/*     									 placeholder="Contraseña" class="form-control input-sm" />*/
+/*     									 placeholder="{{ 'global.placeholder.password'|trans }}" class="form-control input-sm" />*/
 /*                             </div>*/
 /*                             <div class="checkbox">*/
 /*                                 <input type="checkbox" id="remember_me" name="_remember_me" value="on" />*/
-/*     							<label for="remember_me">Recordar</label>*/
+/*     							<label for="remember_me">{{ 'menu.login.remember'|trans }}</label>*/
 /*                             </div>*/
 /*                             <input type="submit" id="_submit" name="_submit"*/
-/*                                    value="Entrar" class="btn btn-info btn-sm" />                                                       */
+/*                                    value="{{ 'menu.login.button'|trans }}" class="btn btn-info btn-sm" />                                                       */
 /*                         </form>*/
 /*                     </div>*/
 /*                 </div>*/

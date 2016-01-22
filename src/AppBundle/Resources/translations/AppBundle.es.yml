@@ -1,0 +1,146 @@
+#AppBundle.es.yml 
+
+product:
+    id: 'id'
+    name: 'Nombre'
+    description: 'Descripción'
+    price: 'Precio'
+    category: 'Categoría'
+    new:
+        title: 'Nuevo producto'
+        header: 'Nuevo producto'
+    show:
+        title: 'Detalles producto'
+        header: 'Detalles producto'
+    list:
+        title: 'Listado de productos'
+        header: 'Listado de productos'
+    delete:
+        title: 'Producto eliminado'
+        header: 'Producto eliminado'
+        resolution: 'El producto ha sido eliminado'
+    edit:
+        title: 'Editar el producto'
+        header: 'Editar el producto'
+    create:
+        title: 'Crear producto estático'
+        header: 'Crear producto estático'
+    static:
+        title: 'Producto estático'
+        header: 'Producto estático'
+        resolution: 'Producto estático creado: '
+category:
+    id: 'id'
+    name: 'Nombre'
+    new:
+        title: 'Nueva categoría'
+        header: 'Nueva categoría'
+    show:
+        title: 'Detalles categoría'
+        header: 'Detalles categoría'
+    list:
+        title: 'Listado de categorias'
+        header: 'Listado de categorias'
+    delete:
+        title: 'Categoría eliminada'
+        header: 'Categoría eliminada'
+        resolution: 'La categoría ha sido eliminada'
+    edit:
+        title: 'Editar la categoría'
+        header: 'Editar la categoría'
+    create:
+        title: 'Crear cateogía estática'
+        header: 'Crear categoría estática'
+    listByCategory:
+        title: 'Listado de productos por categoría'
+        header: 'Listado de productos por categoría'
+    listAllByCategory:
+        title: 'Listado de productos por categoría'
+        header: 'Listado de productos por categoría'
+
+person: 
+    id: 'id' 
+    name: 'Nombre' 
+    age: 'Edad'
+    birthDate: 'Fecha de nacimiento'
+    height: 'Altura'
+    email: 'Email'
+    phone: 'Teléfono'
+    gender: 'Género'
+    descends: 'Número de descendientes'
+    vehicle: 'Vehículo propio'
+    preferredLanguage: 'Lenguaje preferido'
+    language: 'Lenguaje'
+    englishLevel: 'Nivel de inglés'
+    personalWebSite: 'Web personal'
+    cardNumber: 'Número de tarjeta'
+    iban: 'IBAN'
+    new:
+        title: 'Nueva persona' 
+        header: 'Nueva persona'
+    show:
+        title: 'Detalles de persona' 
+        header: 'Detalles de persona'
+    list:
+        title: 'Listado de personas' 
+        header: 'Listado de personas'
+    delete:
+        title: 'Persona eliminada'
+        header: 'Persona eliminada'
+        resolution: 'La persona ha sido eliminada'
+    edit:
+        title: 'Edición de persona' 
+        header: 'Edición de persona'
+   
+    create:
+        title: 'Crear persona por defecto'
+        header: 'Crear persona por defecto'
+menu:
+    home: 'Inicio'
+    product: 
+        pro: 'Producto'
+        new: 'Nuevo'
+        static: 'Nuevo estático'
+        list: 'Listado'
+    category: 
+        cat: 'Categoría'
+        new: 'Nueva'
+        list: 'Listado'
+        listByCategory: 'Listado productos por categorías'
+    person: 
+        per: 'Persona'
+        new: 'Nueva'
+        list: 'Listado'
+    login: 
+        log: ' Acceder'
+        access: 'Nombre de usuario'
+        password: 'Constraseña'
+        remember: 'Recordar'
+        edit: 'Editar'
+        change: 'Cambiar contraseña'
+        logout: 'Salir'
+        button: 'Acceder'
+    register: 'Registrarse'
+
+index:
+    header: 'Symfony2'
+    header2: 'Usuario'
+    text1: 'En esta página podéis ver un ejemplo funcional de las actividades a realizar en el módulo de Desarrollo Web en entorno servidor'
+    text2: 'Para hacer uso completo de la aplicación, será necesario registrarse en la web. Los usuario registrados obtendrán el role ROLE_APP_USER.'
+    text3: 'Para acceder como administrador loguearse como: admin/admin'
+    text4: 'Para hacer uso completo de la aplicación, será necesario registrarse en la web. Los usuario registrados obtendrán el role ROLE_USER.'
+    text5: 'Para acceder como usuario loguearse como: jaen/jaen'
+    
+form:
+    save: 'Guardar'
+    saveAndAdd: 'Guardar y añadir'
+    gender:
+        m: 'Masculino'
+        f: 'Femenino'
+
+global:
+    edit: 'Editar'
+    delete: 'Borrar'
+    placeholder:
+        user: 'Nombre de usuario'
+        password: 'Contraseña'

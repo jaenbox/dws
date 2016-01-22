@@ -18,23 +18,24 @@ class Person {
 	protected $id;
 	/**
 	 * @ORM\Column(type="string")
-	 * @Assert\NotBlank()
+	 * @Assert\NotBlank(message = "val.notblank")
 	 */
 	protected $name;
 	/**
-	 * @ORM\Column(type="integer")
+	 * @ORM\Column(name="age", type="integer")
 	 * @Assert\Range(
 	 * 		min = "18",
 	 *  	max = "90",
-	 *  	minMessage = "Debe de ser mayor de 18.",
-	 *  	maxMessage = "Debe ser menor de 90"
+	 *  	minMessage = "val.age.min",
+	 *  	maxMessage = "val.age.max",
+	 *  	invalidMessage = "val.invalid"
 	 * )
 	 */
 	protected $age;
 	/**
 	 * @ORM\Column(type="date")
-	 * @Assert\Date()
-	 * @Assert\NotBlank()
+	 * @Assert\Date(message="val.date")
+	 * @Assert\NotBlank(message="val.notblank")
 	 */
 	protected $birthDate;
 	/**
@@ -42,32 +43,33 @@ class Person {
 	 * @Assert\Range(
 	 * 		min = "100",
 	 * 		max = "300",
-	 * 		minMessage = "La altura mínima es de 100cm",
-	 * 		maxMessage = "La altura máxima es de 300cm"
+	 * 		minMessage = "val.height.min",
+	 * 		maxMessage = "val.height.max",
+	 * 		invalidMessage= "val.invalid"
 	 * )
 	 */
 	protected $height;
 	/**
 	 * @ORM\Column(type="string")
-	 * @Assert\NotBlank()
+	 * @Assert\NotBlank(message="val.notblank")
 	 * @Assert\Email(
-	 * 		message = "El email '{{ value }}' no es válido",
+	 * 		message = "val.email",
 	 * 		checkMX = true
 	 * )
 	 */
 	protected $email;
 	/**
 	 * @ORM\Column(type="integer")
-	 * @Assert\NotBlank()
+	 * @Assert\NotBlank(message="val.notblank")
 	 * @Assert\Regex(
 	 * 		pattern = "/\d{6}|\d{9}/",
-	 * 		message = "Deben de ser 6 o 9 números"
+	 * 		message = "val.phone"
 	 * ) 
 	 */
 	protected $phone;
 	/**
 	 * @ORM\Column(type="string")
-	 * @Assert\NotBlank()
+	 * @Assert\NotBlank(message="notblank")
 	 * @Assert\Choice(
 	 * 		choices = {"m", "f"}
 	 * ) 
@@ -78,8 +80,9 @@ class Person {
 	 * @Assert\Range(
 	 * 		min = "0",
 	 * 		max = "20",
-	 * 		minMessage = "No se pueden tener hijos negativos",
-	 * 		maxMessage = "Demasiados hijos"
+	 * 		minMessage = "val.descends.min",
+	 * 		maxMessage = "val.descends.max",
+	 * 		invalidMessage= "val.invalid"
 	 * )
 	 */
 	protected $descends;
@@ -103,17 +106,17 @@ class Person {
 	protected $englishLevel;
 	/**
 	 * @ORM\Column(type="string")
-	 * @Assert\Url()
+	 * @Assert\Url(message="val.url")
 	 */
 	protected $personalWebSite;
 	/**
 	 * @ORM\Column(type="string")
-	 * @Assert\CardScheme(schemes = {"VISA", "MASTERCARD", "MAESTRO"}, message = "El número de tu tarjeta de crédito no es válido.")
+	 * @Assert\CardScheme(schemes = {"VISA", "MASTERCARD", "MAESTRO"}, message = "val.card")
 	 */
 	protected $cardNumber;
 	/**
 	 * @ORM\Column(type="string")
-	 * @Assert\Iban(message="Introduce un IBAN correcto")
+	 * @Assert\Iban(message="val.iban")
 	 */
 	protected $IBAN;	
 

@@ -1,0 +1,20 @@
+#AppBundle/Resources/translation/validation.es.yml
+
+val:
+    notblank: 'Este campo no puede estar vacío'
+    age:
+        min: 'La edad mínima es {{ limit }} años'
+        max: 'La edad máxima es {{ limit }} años'
+    date: 'Introduce una fecha válida'
+    height:
+        min: 'La altura mínima es {{ limit }}cm'
+        max: 'La altura máxima es {{ limit }}cm' 
+    email: "El email '{{ value }}' no es válido"
+    phone: "Deben de ser 6 o 9 números"
+    descends:
+        min: 'El número mínimo de descendientes es {{ limit }}'
+        max: 'El número máximo de descendientes es {{ limit }}'
+    url: "La url '{{ value }}' no es válida"
+    card: "El número de tarjeta introducido no es válido"
+    iban: "El IBAN introducido no es válido"
+    invalid: 'El valor introducido no es válido'        

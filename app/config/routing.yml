@@ -3,92 +3,126 @@ app:
     type:     annotation
 
 index:
- path: /
- defaults: { _controller: AppBundle:Default:index}
- 
+ path: /{_locale}
+ defaults: { _controller: AppBundle:Default:index, _locale: es }
+ requirements:
+  _locale: es|en|fr
+
 createStatic:
- path: /product/create
+ path: /{_locale}/product/create
  defaults: { _controller: AppBundle:Product:createStatic }
-
+ requirements:
+  _locale: es|en|fr
+  
 showAction:
- path: /product/show/{id}
+ path: /{_locale}/product/show/{id}
  defaults: { _controller: AppBundle:Product:show }
-
+ requirements:
+  _locale: es|en|fr
+  
 listActionProduct:
- path: /product/list
+ path: /{_locale}/product/list
  defaults: { _controller: AppBundle:Product:list }
+ requirements:
+  _locale: es|en|fr
 
 createParam:
- path: /product/create/{name}/{price}
+ path: /{_locale}/product/create/{name}/{price}
  defaults: { _controller: AppBundle:Product:createParam }
  requirements:
   name: ^[\w]+$
   price: \d{2}|\d{2}\.\d{2}
-
+  _locale: es|en|fr
+  
 createAction:
- path: /category/create/{name}
+ path: /{_locale}/category/create/{name}
  defaults: { _controller: AppBundle:Category:create }
  requirements:
   name: ^[\w]+$
-
+  _locale: es|en|fr
+  
 deleteAction:
- path: /category/delete/{id}
+ path: /{_locale}/category/delete/{id}
  defaults: { _controller: AppBundle:Category:delete }
  requirements:
   id: \d+
-
+  _locale: es|en|fr
+  
 listActionCategory:
- path: /category/list
+ path: /{_locale}/category/list
  defaults: { _controller: AppBundle:Category:list }
-
+ requirements:
+  _locale: es|en|fr
+  
 listByCategory:
- path: /product/list/category/{category}
+ path: /{_locale}/product/list/category/{category}
  defaults: { _controller: AppBundle:Product:listByCategory }
  requirements:
   category: ^[\w]+$
-
+  _locale: es|en|fr
+  
 listAllByCategory:
- path: /product/list/category
+ path: /{_locale}/product/list/category
  defaults: { _controller: AppBundle:Product:listAllByCategory }
-
+ requirements:
+  _locale: es|en|fr
+  
 deleteProduct:
- path: /product/delete/{id}
+ path: /{_locale}/product/delete/{id}
  defaults: { _controller: AppBundle:Product:delete }
  requirements:
   id: \d+
-
+  _locale: es|en|fr
+  
 newProductAction:
- path: /product/new
+ path: /{_locale}/product/new
  defaults: { _controller: AppBundle:Product:newProduct }
-
+ requirements:
+  _locale: es|en|fr
+  
 newCategoryAction:
- path: /category/new
+ path: /{_locale}/category/new
  defaults: { _controller: AppBundle:Category:newCategory }
-
+ requirements:
+  _locale: es|en|fr
+  
 newPersonAction:
- path: /person/new
+ path: /{_locale}/person/new
  defaults: { _controller: AppBundle:Person:new }
-
+ requirements:
+  _locale: es|en|fr
+  
 listPersonAction:
- path: /person/list
+ path: /{_locale}/person/list
  defaults: { _controller: AppBundle:Person:list }
-
+ requirements:
+  _locale: es|en|fr
+  
 showPersonAction:
- path: /person/show/{id}
+ path: /{_locale}/person/show/{id}
  defaults: { _controller: AppBundle:Person:show }
-
+ requirements:
+  _locale: es|en|fr
+  
 deletePersonAction:
- path: /person/delete/{id}
+ path: /{_locale}/person/delete/{id}
  defaults: { _controller: AppBundle:Person:delete }
-
+ requirements:
+  _locale: es|en|fr
+  
 editProduct:
- path: /product/edit/{id}
+ path: /{_locale}/product/edit/{id}
  defaults: { _controller: AppBundle:Product:edit }
-
+ requirements:
+  _locale: es|en|fr
+  
 editCategory:
- path: /category/edit/{id}
+ path: /{_locale}/category/edit/{id}
  defaults: { _controller: AppBundle:Category:edit }
-
+ requirements:
+  _locale: es|en|fr
+  
 # FOSUserBundle
 fos_user:
  resource: "@FOSUserBundle/Resources/config/routing/all.xml"
+ prefix: /{_locale}/

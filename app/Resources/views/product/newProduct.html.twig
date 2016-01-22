@@ -1,15 +1,61 @@
 {# app/Resources/views/product/newProduct.html.twig #}
 
 {% extends "base.html.twig" %}
+{% trans_default_domain 'AppBundle' %}
 
-{% block title %}Actividad 61. Form new  product{% endblock %}
+{% block title %}{{ 'product.new.title'|trans }}{% endblock %}
 
 {% block body %}
 	<hr><hr>
-	<h2>Product</h2>
-	<form method="post" action="#" {{ form_enctype(form) }}>
-		{{ form_errors(form) }}
-		{{ form_widget(form) }}
-	</form>	
+	<h2>{{ 'product.new.header'|trans }}</h2>
+		<div class="row">
+			<div class="col-sm-5">
+				{{ form_start(form, {'attr': {'name':'form', 'method':'post', 'action':'#', 'class':'form-horizontal'} }) }}				
+					<div class="form-group">
+						{{ form_label(form.name, null, {'label_attr': {'class':'col-sm-2 control-label required'} })  }}
+						<div class="col-sm-5">
+							{{ form_widget(form.name, {'attr': {'class':'form-control'} }) }}
+						</div>
+						{{ form_errors(form.name) }}
+					</div>
+					<div class="form-group">
+						{{ form_label(form.description, null, {'label_attr': {'class':'col-sm-2 control-label required'} })  }}
+						<div class="col-sm-5">
+							{{ form_widget(form.description, {'attr': {'class':'form-control'} }) }}
+						</div>
+						{{ form_errors(form.description) }}
+					</div>
+					<div class="form-group">
+						{{ form_label(form.price, null, {'label_attr': {'class':'col-sm-2 control-label required'} })  }}
+						<div class="col-sm-5">
+							{{ form_widget(form.price, {'attr': {'class':'form-control'} }) }}
+							
+						</div>
+						{{ form_errors(form.price) }}
+					</div>
+					<div class="form-group">
+						{{ form_label(form.category, null, {'label_attr': {'class':'col-sm-2 control-label required'} })  }}
+						<div class="col-sm-5">
+							{{ form_widget(form.category, {'attr': {'class':'form-control'} }) }}
+						</div>
+						{{ form_errors(form.category) }}
+					</div>
+					<div class="form-group">
+						<div class="col-sm-2"></div>
+						{{ form_label(form.save, null, {'label_attr': {'class':'col-sm-2'} })  }}
+						<div class="col-sm-5">
+							{{ form_widget(form.save, {'attr': {'class':'btn-default btn'} }) }}
+						</div>
+					</div>
+					<div class="form-group">
+						<div class="col-sm-2"></div>
+						{{ form_label(form.saveAndAdd, null, {'label_attr': {'class':'col-sm-2'} })  }}
+						<div class="col-sm-5">
+							{{ form_widget(form.saveAndAdd, {'attr': {'class':'btn-default btn'} }) }}
+						</div>
+					</div>
+				{{ form_end(form) }}
+			</div>
+		</div>
 {% endblock %}
 {% block javascripts %}{% endblock %}

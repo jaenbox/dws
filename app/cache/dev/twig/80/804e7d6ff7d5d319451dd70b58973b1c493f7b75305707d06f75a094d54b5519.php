@@ -21,20 +21,20 @@ class __TwigTemplate_5cab16ae51397e909f8e218a8f1cabf5a98ba5ae144921408829af01ec0
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_af76205142fc3d742e54fb2b8fdf76d74687f724a1e0b73a0a0f8cf5a15f62a8 = $this->env->getExtension("native_profiler");
-        $__internal_af76205142fc3d742e54fb2b8fdf76d74687f724a1e0b73a0a0f8cf5a15f62a8->enter($__internal_af76205142fc3d742e54fb2b8fdf76d74687f724a1e0b73a0a0f8cf5a15f62a8_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "default/index.html.twig"));
+        $__internal_dcb9da908d435cf41a2d572e4cfbc40eab78b68f683423286caae553fc8dd6ab = $this->env->getExtension("native_profiler");
+        $__internal_dcb9da908d435cf41a2d572e4cfbc40eab78b68f683423286caae553fc8dd6ab->enter($__internal_dcb9da908d435cf41a2d572e4cfbc40eab78b68f683423286caae553fc8dd6ab_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "default/index.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_af76205142fc3d742e54fb2b8fdf76d74687f724a1e0b73a0a0f8cf5a15f62a8->leave($__internal_af76205142fc3d742e54fb2b8fdf76d74687f724a1e0b73a0a0f8cf5a15f62a8_prof);
+        $__internal_dcb9da908d435cf41a2d572e4cfbc40eab78b68f683423286caae553fc8dd6ab->leave($__internal_dcb9da908d435cf41a2d572e4cfbc40eab78b68f683423286caae553fc8dd6ab_prof);
 
     }
 
-    // line 3
+    // line 4
     public function block_body($context, array $blocks = array())
     {
-        $__internal_6f505c72a9b3c3a2213cc7c97156279376196118009112a6da5e693a84a37467 = $this->env->getExtension("native_profiler");
-        $__internal_6f505c72a9b3c3a2213cc7c97156279376196118009112a6da5e693a84a37467->enter($__internal_6f505c72a9b3c3a2213cc7c97156279376196118009112a6da5e693a84a37467_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
+        $__internal_16952d6a675617b4b278041d5eba4a1664cb8eeb593f0797730e129b43519886 = $this->env->getExtension("native_profiler");
+        $__internal_16952d6a675617b4b278041d5eba4a1664cb8eeb593f0797730e129b43519886->enter($__internal_16952d6a675617b4b278041d5eba4a1664cb8eeb593f0797730e129b43519886_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
 
         echo "   
 
@@ -42,19 +42,40 @@ class __TwigTemplate_5cab16ae51397e909f8e218a8f1cabf5a98ba5ae144921408829af01ec0
 \t\t\t<div class=\"page-header\">
 \t\t\t\t<hr>
                 <hr>\t\t\t\t
-\t\t\t\t<h1> Symfony</h1>
+\t\t\t\t<h1> ";
+        // line 10
+        echo twig_escape_filter($this->env, $this->env->getExtension('translator')->trans("index.header", array(), "AppBundle"), "html", null, true);
+        echo "</h1>
 \t\t\t</div>
-\t\t\t<p class=\"lead\"> En esta página podéis ver un ejemplo funcional de las actividades a realizar en el módulo de Desarrollo Web en entorno servidor </p>
-\t\t\t<h3>Usuario</h3>
-\t\t\t<p> Para hacer uso completo de la aplicación, será necesario registrarse en la web. Los usuario registrados obtendrán el role ROLE_APP_USER.
-\t\t\t<p class=\"text-info\"> Para acceder como administrador loggearse como: <em>admin/admin</em> </p>
-\t\t\t<p> Para hacer uso completo de la aplicación, será necesario registrarse en la web. Los usuario registrados obtendrán el role ROLE_USER.
-\t\t\t<p class=\"text-info\"> Para acceder como usuario loggearse como: <em>jaen/jaen</em> </p>
+\t\t\t<p class=\"lead\"> ";
+        // line 12
+        echo twig_escape_filter($this->env, $this->env->getExtension('translator')->trans("index.text1", array(), "AppBundle"), "html", null, true);
+        echo " </p>
+\t\t\t<h3>";
+        // line 13
+        echo twig_escape_filter($this->env, $this->env->getExtension('translator')->trans("index.header2", array(), "AppBundle"), "html", null, true);
+        echo " </h3>
+\t\t\t<p> ";
+        // line 14
+        echo twig_escape_filter($this->env, $this->env->getExtension('translator')->trans("index.text2", array(), "AppBundle"), "html", null, true);
+        echo "
+\t\t\t<p class=\"text-info\"> ";
+        // line 15
+        echo twig_escape_filter($this->env, $this->env->getExtension('translator')->trans("index.text3", array(), "AppBundle"), "html", null, true);
+        echo " </p>
+\t\t\t<p> ";
+        // line 16
+        echo twig_escape_filter($this->env, $this->env->getExtension('translator')->trans("index.text4", array(), "AppBundle"), "html", null, true);
+        echo "
+\t\t\t<p class=\"text-info\"> ";
+        // line 17
+        echo twig_escape_filter($this->env, $this->env->getExtension('translator')->trans("index.text5", array(), "AppBundle"), "html", null, true);
+        echo " </p>
 \t\t</div>
 
 ";
         
-        $__internal_6f505c72a9b3c3a2213cc7c97156279376196118009112a6da5e693a84a37467->leave($__internal_6f505c72a9b3c3a2213cc7c97156279376196118009112a6da5e693a84a37467_prof);
+        $__internal_16952d6a675617b4b278041d5eba4a1664cb8eeb593f0797730e129b43519886->leave($__internal_16952d6a675617b4b278041d5eba4a1664cb8eeb593f0797730e129b43519886_prof);
 
     }
 
@@ -70,10 +91,11 @@ class __TwigTemplate_5cab16ae51397e909f8e218a8f1cabf5a98ba5ae144921408829af01ec0
 
     public function getDebugInfo()
     {
-        return array (  34 => 3,  11 => 1,);
+        return array (  72 => 17,  68 => 16,  64 => 15,  60 => 14,  56 => 13,  52 => 12,  47 => 10,  34 => 4,  11 => 1,);
     }
 }
 /* {% extends 'base.html.twig' %}*/
+/* {% trans_default_domain 'AppBundle' %}*/
 /* */
 /* {% block body %}   */
 /* */
@@ -81,14 +103,14 @@ class __TwigTemplate_5cab16ae51397e909f8e218a8f1cabf5a98ba5ae144921408829af01ec0
 /* 			<div class="page-header">*/
 /* 				<hr>*/
 /*                 <hr>				*/
-/* 				<h1> Symfony</h1>*/
+/* 				<h1> {{ 'index.header'|trans }}</h1>*/
 /* 			</div>*/
-/* 			<p class="lead"> En esta página podéis ver un ejemplo funcional de las actividades a realizar en el módulo de Desarrollo Web en entorno servidor </p>*/
-/* 			<h3>Usuario</h3>*/
-/* 			<p> Para hacer uso completo de la aplicación, será necesario registrarse en la web. Los usuario registrados obtendrán el role ROLE_APP_USER.*/
-/* 			<p class="text-info"> Para acceder como administrador loggearse como: <em>admin/admin</em> </p>*/
-/* 			<p> Para hacer uso completo de la aplicación, será necesario registrarse en la web. Los usuario registrados obtendrán el role ROLE_USER.*/
-/* 			<p class="text-info"> Para acceder como usuario loggearse como: <em>jaen/jaen</em> </p>*/
+/* 			<p class="lead"> {{ 'index.text1'|trans }} </p>*/
+/* 			<h3>{{ 'index.header2' |trans }} </h3>*/
+/* 			<p> {{ 'index.text2'|trans }}*/
+/* 			<p class="text-info"> {{ 'index.text3' |trans }} </p>*/
+/* 			<p> {{ 'index.text4' |trans }}*/
+/* 			<p class="text-info"> {{ 'index.text5' |trans }} </p>*/
 /* 		</div>*/
 /* */
 /* {% endblock %}*/

@@ -1,16 +1,18 @@
 {% extends "base.html.twig" %}
+{% trans_default_domain 'AppBundle' %}
 
-{% block title %}Actividad 62. Delete Person {% endblock %}
+{% block title %}{{ 'person.delete.title'|trans }}{% endblock %}
 
 
 {% block body %}
 	{# Mostramos los objetos con dump 
 	{{ dump(person) }} #}
 	<hr><hr>
+	<h2>{{ 'person.delete.header'|trans }}</h2>
 	{# Mostramos el mensaje success #}
-	La persona <strong>{{ person.name}}</strong> a sido eliminada.
+	{{ 'person.delete.resolution'|trans }}
 	<div>
-		<a href="{{ url('listPersonAction')}}">atrás</a>
+		{# <a href="{{ url('listPersonAction')}}">atrás</a> #}
 	</div>
 	
 {% endblock %}
