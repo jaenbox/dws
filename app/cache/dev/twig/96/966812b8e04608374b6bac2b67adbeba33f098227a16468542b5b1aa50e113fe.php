@@ -23,98 +23,99 @@ class __TwigTemplate_a9345e03a95bf4f18de34abc15eb6648bb779b25d937cd786d9a91e53f2
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_7e8a2385cc60b22ff2036e5b005ef8945834ac97f64752ab79d08419e50cc43b = $this->env->getExtension("native_profiler");
-        $__internal_7e8a2385cc60b22ff2036e5b005ef8945834ac97f64752ab79d08419e50cc43b->enter($__internal_7e8a2385cc60b22ff2036e5b005ef8945834ac97f64752ab79d08419e50cc43b_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "category/listAllByCategoryAction.html.twig"));
+        $__internal_d1c88bc1e357bcff25d1af746f55bcc1b3b77b280607c475ebe10e024cba029f = $this->env->getExtension("native_profiler");
+        $__internal_d1c88bc1e357bcff25d1af746f55bcc1b3b77b280607c475ebe10e024cba029f->enter($__internal_d1c88bc1e357bcff25d1af746f55bcc1b3b77b280607c475ebe10e024cba029f_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "category/listAllByCategoryAction.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_7e8a2385cc60b22ff2036e5b005ef8945834ac97f64752ab79d08419e50cc43b->leave($__internal_7e8a2385cc60b22ff2036e5b005ef8945834ac97f64752ab79d08419e50cc43b_prof);
+        $__internal_d1c88bc1e357bcff25d1af746f55bcc1b3b77b280607c475ebe10e024cba029f->leave($__internal_d1c88bc1e357bcff25d1af746f55bcc1b3b77b280607c475ebe10e024cba029f_prof);
 
     }
 
     // line 4
     public function block_title($context, array $blocks = array())
     {
-        $__internal_f9eb1e244bfd1f778f7b94147a9fda1e3a58a30fd4b5cfa9b379a265aabad0b3 = $this->env->getExtension("native_profiler");
-        $__internal_f9eb1e244bfd1f778f7b94147a9fda1e3a58a30fd4b5cfa9b379a265aabad0b3->enter($__internal_f9eb1e244bfd1f778f7b94147a9fda1e3a58a30fd4b5cfa9b379a265aabad0b3_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
+        $__internal_f3a90b62b0d26f9ad6a90c103030960752aedfc8fac518a965195836d93b3821 = $this->env->getExtension("native_profiler");
+        $__internal_f3a90b62b0d26f9ad6a90c103030960752aedfc8fac518a965195836d93b3821->enter($__internal_f3a90b62b0d26f9ad6a90c103030960752aedfc8fac518a965195836d93b3821_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
 
         echo twig_escape_filter($this->env, $this->env->getExtension('translator')->trans("category.listAllByCategory.title", array(), "AppBundle"), "html", null, true);
         echo " ";
         
-        $__internal_f9eb1e244bfd1f778f7b94147a9fda1e3a58a30fd4b5cfa9b379a265aabad0b3->leave($__internal_f9eb1e244bfd1f778f7b94147a9fda1e3a58a30fd4b5cfa9b379a265aabad0b3_prof);
+        $__internal_f3a90b62b0d26f9ad6a90c103030960752aedfc8fac518a965195836d93b3821->leave($__internal_f3a90b62b0d26f9ad6a90c103030960752aedfc8fac518a965195836d93b3821_prof);
 
     }
 
     // line 6
     public function block_body($context, array $blocks = array())
     {
-        $__internal_b2cb729bd683219d48a1ed659a3de8f87b04832c67a2ec5d1dd56e552a038669 = $this->env->getExtension("native_profiler");
-        $__internal_b2cb729bd683219d48a1ed659a3de8f87b04832c67a2ec5d1dd56e552a038669->enter($__internal_b2cb729bd683219d48a1ed659a3de8f87b04832c67a2ec5d1dd56e552a038669_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
+        $__internal_ce6887b080dc7be440a6d28582e5033ad5f27cf1460332d11316091278f7dfc6 = $this->env->getExtension("native_profiler");
+        $__internal_ce6887b080dc7be440a6d28582e5033ad5f27cf1460332d11316091278f7dfc6->enter($__internal_ce6887b080dc7be440a6d28582e5033ad5f27cf1460332d11316091278f7dfc6_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
 
         // line 9
-        echo "\t<hr><hr>
-\t<h2>";
+        echo "\t<div id=\"content\">
+\t\t<h2>";
         // line 10
         echo twig_escape_filter($this->env, $this->env->getExtension('translator')->trans("category.listAllByCategory.header", array(), "AppBundle"), "html", null, true);
         echo "</h2>
-\t<br>
-\t<table  class=\"table table-striped\">
-\t\t<tbody>
-\t\t\t";
+\t\t<br>
+\t\t<table  class=\"table table-striped\">
+\t\t\t<tbody>
+\t\t\t\t";
         // line 14
         $context['_parent'] = $context;
         $context['_seq'] = twig_ensure_traversable((isset($context["categories"]) ? $context["categories"] : $this->getContext($context, "categories")));
         foreach ($context['_seq'] as $context["_key"] => $context["category"]) {
             // line 15
-            echo "\t\t\t\t<thead>
-\t\t\t\t\t<tr>
-\t\t\t\t\t\t<th>";
+            echo "\t\t\t\t\t<thead>
+\t\t\t\t\t\t<tr>
+\t\t\t\t\t\t\t<th>";
             // line 17
             echo twig_escape_filter($this->env, $this->getAttribute($context["category"], "name", array()), "html", null, true);
             echo "</td>
-\t\t\t\t\t</tr>
-\t\t\t\t</thead>
-\t\t\t\t";
+\t\t\t\t\t\t</tr>
+\t\t\t\t\t</thead>
+\t\t\t\t\t";
             // line 20
             $context['_parent'] = $context;
             $context['_seq'] = twig_ensure_traversable($this->getAttribute($context["category"], "products", array()));
             foreach ($context['_seq'] as $context["_key"] => $context["product"]) {
                 // line 21
-                echo "\t\t\t\t\t<tr>
-\t\t\t\t\t\t<td>";
+                echo "\t\t\t\t\t\t<tr>
+\t\t\t\t\t\t\t<td>";
                 // line 22
                 echo twig_escape_filter($this->env, $this->getAttribute($context["product"], "name", array()), "html", null, true);
                 echo "</td>
-\t\t\t\t\t</tr>
-\t\t\t\t";
+\t\t\t\t\t\t</tr>
+\t\t\t\t\t";
             }
             $_parent = $context['_parent'];
             unset($context['_seq'], $context['_iterated'], $context['_key'], $context['product'], $context['_parent'], $context['loop']);
             $context = array_intersect_key($context, $_parent) + $_parent;
             // line 25
-            echo "\t\t\t";
+            echo "\t\t\t\t";
         }
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['category'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
         // line 26
-        echo "\t\t\t
-\t\t</tbody>
-\t</table>\t
+        echo "\t\t\t\t
+\t\t\t</tbody>
+\t\t</table>\t
+\t</div>
 ";
         
-        $__internal_b2cb729bd683219d48a1ed659a3de8f87b04832c67a2ec5d1dd56e552a038669->leave($__internal_b2cb729bd683219d48a1ed659a3de8f87b04832c67a2ec5d1dd56e552a038669_prof);
+        $__internal_ce6887b080dc7be440a6d28582e5033ad5f27cf1460332d11316091278f7dfc6->leave($__internal_ce6887b080dc7be440a6d28582e5033ad5f27cf1460332d11316091278f7dfc6_prof);
 
     }
 
-    // line 30
+    // line 31
     public function block_javascripts($context, array $blocks = array())
     {
-        $__internal_a99115f5ab479b995de92ac4eb5d6ea741d9b70dfdb54699f30a7249c5dd3ced = $this->env->getExtension("native_profiler");
-        $__internal_a99115f5ab479b995de92ac4eb5d6ea741d9b70dfdb54699f30a7249c5dd3ced->enter($__internal_a99115f5ab479b995de92ac4eb5d6ea741d9b70dfdb54699f30a7249c5dd3ced_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "javascripts"));
+        $__internal_ee9d772593287bce3906901c2782b7225cbb2ba1042696926e3a3cf8abac0431 = $this->env->getExtension("native_profiler");
+        $__internal_ee9d772593287bce3906901c2782b7225cbb2ba1042696926e3a3cf8abac0431->enter($__internal_ee9d772593287bce3906901c2782b7225cbb2ba1042696926e3a3cf8abac0431_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "javascripts"));
 
         
-        $__internal_a99115f5ab479b995de92ac4eb5d6ea741d9b70dfdb54699f30a7249c5dd3ced->leave($__internal_a99115f5ab479b995de92ac4eb5d6ea741d9b70dfdb54699f30a7249c5dd3ced_prof);
+        $__internal_ee9d772593287bce3906901c2782b7225cbb2ba1042696926e3a3cf8abac0431->leave($__internal_ee9d772593287bce3906901c2782b7225cbb2ba1042696926e3a3cf8abac0431_prof);
 
     }
 
@@ -130,7 +131,7 @@ class __TwigTemplate_a9345e03a95bf4f18de34abc15eb6648bb779b25d937cd786d9a91e53f2
 
     public function getDebugInfo()
     {
-        return array (  111 => 30,  101 => 26,  95 => 25,  86 => 22,  83 => 21,  79 => 20,  73 => 17,  69 => 15,  65 => 14,  58 => 10,  55 => 9,  49 => 6,  36 => 4,  11 => 1,);
+        return array (  112 => 31,  101 => 26,  95 => 25,  86 => 22,  83 => 21,  79 => 20,  73 => 17,  69 => 15,  65 => 14,  58 => 10,  55 => 9,  49 => 6,  36 => 4,  11 => 1,);
     }
 }
 /* {% extends "base.html.twig" %}*/
@@ -141,25 +142,26 @@ class __TwigTemplate_a9345e03a95bf4f18de34abc15eb6648bb779b25d937cd786d9a91e53f2
 /* {% block body %}*/
 /* {# Listamos los productos en una lista. #}*/
 /* {# {{ dump(categories) }} #}*/
-/* 	<hr><hr>*/
-/* 	<h2>{{ 'category.listAllByCategory.header'|trans }}</h2>*/
-/* 	<br>*/
-/* 	<table  class="table table-striped">*/
-/* 		<tbody>*/
-/* 			{% for category in categories %}*/
-/* 				<thead>*/
-/* 					<tr>*/
-/* 						<th>{{ category.name }}</td>*/
-/* 					</tr>*/
-/* 				</thead>*/
-/* 				{% for product in category.products %}*/
-/* 					<tr>*/
-/* 						<td>{{ product.name }}</td>*/
-/* 					</tr>*/
+/* 	<div id="content">*/
+/* 		<h2>{{ 'category.listAllByCategory.header'|trans }}</h2>*/
+/* 		<br>*/
+/* 		<table  class="table table-striped">*/
+/* 			<tbody>*/
+/* 				{% for category in categories %}*/
+/* 					<thead>*/
+/* 						<tr>*/
+/* 							<th>{{ category.name }}</td>*/
+/* 						</tr>*/
+/* 					</thead>*/
+/* 					{% for product in category.products %}*/
+/* 						<tr>*/
+/* 							<td>{{ product.name }}</td>*/
+/* 						</tr>*/
+/* 					{% endfor %}*/
 /* 				{% endfor %}*/
-/* 			{% endfor %}*/
-/* 			*/
-/* 		</tbody>*/
-/* 	</table>	*/
+/* 				*/
+/* 			</tbody>*/
+/* 		</table>	*/
+/* 	</div>*/
 /* {% endblock %}*/
 /* {% block javascripts %}{% endblock %}*/

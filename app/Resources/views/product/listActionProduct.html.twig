@@ -6,49 +6,50 @@
 {% block body %}
 	
 	{# Listamos los productos en una lista. #}
-	<hr><hr>
-	<h2>{{ 'product.list.header' | trans }}</h2>
-	<table class="table table-striped">	
-			<tbody>
-				<thead>
-					<tr>
-						<td>{{ 'product.id' | trans }}</td>
-						<td>{{ 'product.name'|trans }}</td>
-						<td>{{ 'product.price'|trans }}</td>
-						<td>{{ 'product.description'|trans }}</td>
-						<td>{{ 'product.category'|trans }}</td>
-						{% if is_granted('ROLE_APP_ADMIN') %}
-						<td>{{ 'global.edit'|trans }}</td>
-						<td>{{ 'global.delete'|trans }}</td>
-						{% endif %}
-					</tr>
-				</thead>
-					{% for producto in products %}
+	<div id="content">
+		<h2>{{ 'product.list.header' | trans }}</h2>
+		<table class="table table-striped">	
+				<tbody>
+					<thead>
 						<tr>
-							<td>{{ producto.id }}</td>
-							<td>{{ producto.name }}</td>
-							<td>{{ producto.price }}</td>
-							<td>{{ producto.description }}</td>
-							<td>{{ producto.category.name }}</td>
+							<td>{{ 'product.id' | trans }}</td>
+							<td>{{ 'product.name'|trans }}</td>
+							<td>{{ 'product.price'|trans }}</td>
+							<td>{{ 'product.description'|trans }}</td>
+							<td>{{ 'product.category'|trans }}</td>
 							{% if is_granted('ROLE_APP_ADMIN') %}
-							<td><a href="{{
-								path(
-									'editProduct',
-									{ 'id': producto.id }
-								) 
-								}}"><i class="fa fa-pencil-square-o"></i></a></td>
-							<td><a href="{{
-								path(
-									'deleteProduct',
-									{ 'id': producto.id }
-								) 
-								}}"><i class="fa fa-trash fa-lg"></i></a></td>
+							<td>{{ 'global.edit'|trans }}</td>
+							<td>{{ 'global.delete'|trans }}</td>
 							{% endif %}
 						</tr>
-					{% endfor %}
-				
-		</tbody>
-	</table> 
-	{# <a href="{{ url('newProductAction')}}">atrás</a> #} 
+					</thead>
+						{% for producto in products %}
+							<tr>
+								<td>{{ producto.id }}</td>
+								<td>{{ producto.name }}</td>
+								<td>{{ producto.price }}</td>
+								<td>{{ producto.description }}</td>
+								<td>{{ producto.category.name }}</td>
+								{% if is_granted('ROLE_APP_ADMIN') %}
+								<td><a href="{{
+									path(
+										'editProduct',
+										{ 'id': producto.id }
+									) 
+									}}"><i class="fa fa-pencil-square-o"></i></a></td>
+								<td><a href="{{
+									path(
+										'deleteProduct',
+										{ 'id': producto.id }
+									) 
+									}}"><i class="fa fa-trash fa-lg"></i></a></td>
+								{% endif %}
+							</tr>
+						{% endfor %}
+					
+			</tbody>
+		</table> 
+		{# <a href="{{ url('newProductAction')}}">atrás</a> #}
+	</div> 
 {% endblock %}
 {% block javascripts %}{% endblock %}

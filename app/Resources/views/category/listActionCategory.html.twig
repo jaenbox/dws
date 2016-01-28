@@ -8,42 +8,43 @@
 	{{ dump(categories) }} #}
 	
 	{# Listamos el producto en una lista. #}
-	<hr><hr>
-	<h2>{{ 'category.list.header'|trans }}</h2>
-	<table class="table table-striped">
-		<tbody>
-			<thead>
-				<tr>
-					<td>{{ 'category.id'|trans }}</td>
-					<td>{{ 'category.name'|trans }}</td>
-					{% if is_granted('ROLE_APP_ADMIN') %}
-						<td>{{ 'global.edit'|trans }}</td>
-						<td>{{ 'global.delete'|trans }}</td>
-					{% endif %}
-				</tr>
-			</thead>
-				{% for category in categories%}
+	<div id="content">
+		<h2>{{ 'category.list.header'|trans }}</h2>
+		<table class="table table-striped">
+			<tbody>
+				<thead>
 					<tr>
-						<td>{{ category.id }}</td>
-						<td>{{ category.name }}</td>
+						<td>{{ 'category.id'|trans }}</td>
+						<td>{{ 'category.name'|trans }}</td>
 						{% if is_granted('ROLE_APP_ADMIN') %}
-						<td><a href="{{
-							path(
-								'editCategory',
-								{ 'id': category.id }
-							) 
-							}}"><i class="fa fa-pencil-square-o"></i></a></td>
-						<td><a href="{{
-							path(
-								'deleteAction',
-								{ 'id': category.id }
-							) 
-							}}"><i class="fa fa-trash fa-lg"></i></a></td>
+							<td>{{ 'global.edit'|trans }}</td>
+							<td>{{ 'global.delete'|trans }}</td>
 						{% endif %}
 					</tr>
-				{% endfor %} 
-		</tbody>
-	</table> 
-	{# <a href="{{ url('newCategoryAction')}}">atrás</a> #}
+				</thead>
+					{% for category in categories%}
+						<tr>
+							<td>{{ category.id }}</td>
+							<td>{{ category.name }}</td>
+							{% if is_granted('ROLE_APP_ADMIN') %}
+							<td><a href="{{
+								path(
+									'editCategory',
+									{ 'id': category.id }
+								) 
+								}}"><i class="fa fa-pencil-square-o"></i></a></td>
+							<td><a href="{{
+								path(
+									'deleteAction',
+									{ 'id': category.id }
+								) 
+								}}"><i class="fa fa-trash fa-lg"></i></a></td>
+							{% endif %}
+						</tr>
+					{% endfor %} 
+			</tbody>
+		</table> 
+		{# <a href="{{ url('newCategoryAction')}}">atrás</a> #}
+	</div>
 {% endblock %}
 {% block javascripts %}{% endblock %}

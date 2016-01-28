@@ -3,29 +3,29 @@
 
 {% block title %}{{ 'product.static.title'|trans }}{% endblock %}
 {% block body %}	
-
-	<hr><hr>
-	<h2>{{ 'product.static.header'|trans }}</h2>
-	<h3>{{ 'product.static.resolution'|trans }}</h3>
-	<table  class="table table-striped">
-		<tbody>
-			<thead>
-				<tr>
-					<td>{{ 'product.id'|trans }}</td>
-					<td>{{ 'product.name'|trans }}</td>
-					<td>{{ 'product.price'|trans }}(€)</td>
-					<td>{{ 'product.description'|trans }}</td>
-					<td>{{ 'product.category'|trans }}</td>
-				</tr>
-			</thead>
-				<tr>
-					<td>{{ product.id }}</td>
-					<td>{{ product.name }}</td>
-					<td>{{ product.price }}</td>
-					<td>{{ product.description }}</td>
-					<td>{{ product.category.name }}</td>
-				</tr>
-		</tbody>
-	</table> 
+	<div id="content">
+		<h2>{{ 'product.static.header'|trans }}</h2>
+		<h3>{{ 'product.static.resolution'|trans }}</h3>
+		<table  class="table table-striped">
+			<tbody>
+				<thead>
+					<tr>
+						<td>{{ 'product.id'|trans }}</td>
+						<td>{{ 'product.name'|trans }}</td>
+						<td>{{ 'product.price'|trans }}(€)</td>
+						<td>{{ 'product.description'|trans }}</td>
+						<td>{{ 'product.category'|trans }}</td>
+					</tr>
+				</thead>
+					<tr>
+						<td>{{ product.id }}</td>
+						<td>{{ product.name }}</td>
+						<td>{{ product.price }}</td>
+						<td>{{ product.description }}</td>
+						<td>{{ product.category.name }}</td>
+					</tr>
+			</tbody>
+		</table>
+	</div> 
 {% endblock %}
 {% block javascripts %}{% endblock %}

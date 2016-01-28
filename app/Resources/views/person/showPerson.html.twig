@@ -7,44 +7,44 @@
 {% block body %}
 	{# Mostramos los objetos con dump 
 	{{ dump(product) }} #}
-	
-	{# Listamos el cliente en una lista. #}
-	<hr><hr>
-	<h2>{{ 'person.show.title'|trans }}:{{ person.name }}</h2>
-	<table class="table">
-		<tbody>
-				<tr><th>{{ 'person.id'|trans }}</th><td>{{ person.id }}</td></tr>
-				<tr><th>{{ 'person.name'|trans }}</th><td>{{ person.name }}</td></tr>
-				<tr><th>{{ 'person.age'|trans }}</th><td>{{ person.age }}</td></tr>
-				<tr><th>{{ 'person.birthDate'|trans }}</th><td>{{ person.birthDate|date("d/m/Y") }}</td></tr>
-				<tr><th>{{ 'person.height'|trans }}</th><td>{{ person.height }}</td></tr>
-				<tr><th><i class="fa fa-envelope fa-2x"></th><td>{{ person.email }}</td></tr>
-				<tr><th><i class="fa fa-phone-square fa-2x"></th><td>{{ person.phone }}</td></tr>
-				<tr><th>{{ 'person.gender'|trans }}</th><td>{{ person.gender }}</td></tr>
-				<tr><th>{{ 'person.descends'|trans }}</th><td>{{ person.descends }}</td></tr>
-				<tr><th><i class="fa fa-car fa-2x"></th><td>{{ person.vehicle }}</td></tr>
-				<tr><th>{{ 'person.language'|trans }}</th><td>{{ person.preferredLanguage }}</td></tr>
-				<tr><th>{{ 'person.englishLevel'|trans }}</th><td>{% if person.englishLevel == 0 %}
-													none</td></tr>
-												{% elseif person.englishLevel == 1 %}
-												 	A1</td></tr>
-												{% elseif person.englishLevel == 2 %}
-													A2</td></tr>
-												{% elseif person.englishLevel == 3 %}
-													B1</td></tr>
-												{% elseif person.englishLevel == 4 %}
-													B2</td></tr>
-												{% elseif person.englishLevel == 5 %}
-													C1</td></tr>
-												{% elseif person.englishLevel == 6 %}
-													C2</td></tr>
-												{% endif %}
-				<tr><th>{{ 'person.personalWebSite'|trans }}</th><td>{{ person.personalWebSite }}</td></tr>
-				<tr><th><i class="fa fa-credit-card fa-2x"></th><td>{{ person.cardNumber }}</td></tr>
-				<tr><th>{{ 'person.iban'|trans }}</th><td>{{ person.iban }}</td></tr>
-				{# <tr><th>Imágen</th><td><img src="holder.js/200x200"/></td></tr> #}
-		</tbody>
-	</table> 
-	<a href="{{ url('listPersonAction')}}">atrás</a>
+	<div id="content">
+		<h2>{{ 'person.show.title'|trans }}:{{ person.name }}</h2>
+		{# Listamos el cliente en una lista. #}
+		<table class="table">
+			<tbody>
+					<tr><th>{{ 'person.id'|trans }}</th><td>{{ person.id }}</td></tr>
+					<tr><th>{{ 'person.name'|trans }}</th><td>{{ person.name }}</td></tr>
+					<tr><th>{{ 'person.age'|trans }}</th><td>{{ person.age }}</td></tr>
+					<tr><th>{{ 'person.birthDate'|trans }}</th><td>{{ person.birthDate|date("d/m/Y") }}</td></tr>
+					<tr><th>{{ 'person.height'|trans }}</th><td>{{ person.height }}</td></tr>
+					<tr><th><i class="fa fa-envelope fa-2x"></th><td>{{ person.email }}</td></tr>
+					<tr><th><i class="fa fa-phone-square fa-2x"></th><td>{{ person.phone }}</td></tr>
+					<tr><th>{{ 'person.gender'|trans }}</th><td>{{ person.gender }}</td></tr>
+					<tr><th>{{ 'person.descends'|trans }}</th><td>{{ person.descends }}</td></tr>
+					<tr><th><i class="fa fa-car fa-2x"></th><td>{{ person.vehicle }}</td></tr>
+					<tr><th>{{ 'person.language'|trans }}</th><td>{{ person.preferredLanguage }}</td></tr>
+					<tr><th>{{ 'person.englishLevel'|trans }}</th><td>{% if person.englishLevel == 0 %}
+														none</td></tr>
+													{% elseif person.englishLevel == 1 %}
+													 	A1</td></tr>
+													{% elseif person.englishLevel == 2 %}
+														A2</td></tr>
+													{% elseif person.englishLevel == 3 %}
+														B1</td></tr>
+													{% elseif person.englishLevel == 4 %}
+														B2</td></tr>
+													{% elseif person.englishLevel == 5 %}
+														C1</td></tr>
+													{% elseif person.englishLevel == 6 %}
+														C2</td></tr>
+													{% endif %}
+					<tr><th>{{ 'person.personalWebSite'|trans }}</th><td>{{ person.personalWebSite }}</td></tr>
+					<tr><th><i class="fa fa-credit-card fa-2x"></th><td>{{ person.cardNumber }}</td></tr>
+					<tr><th>{{ 'person.iban'|trans }}</th><td>{{ person.iban }}</td></tr>
+					{# <tr><th>Imágen</th><td><img src="holder.js/200x200"/></td></tr> #}
+			</tbody>
+		</table> 
+		<a href="{{ url('listPersonAction')}}">atrás</a>
+	</div>
 {% endblock %}
 {% block javascripts %}{% endblock %}

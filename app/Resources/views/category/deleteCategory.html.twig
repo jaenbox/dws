@@ -5,16 +5,12 @@
 
 
 {% block body %}
-	{# Mostramos los objetos con dump 
-	{{ dump(category) }} #}
-	
-	{# Mostramos el mensaje success #}
-	<hr><hr>
-	<h2>{{ 'category.delete.header'|trans }}</h2>
-	{{ 'category.delete.resolution'|trans }}
-	<div>
-		{# <a href="{{ url('listActionCategory')}}">atrás</a> #}
-	</div>
-	
+	<div id="content">
+		<h2>{{ 'category.delete.header'|trans }}</h2>
+		{{ 'category.delete.resolution'|trans }}
+		<div>
+			{# <a href="{{ url('listActionCategory')}}">atrás</a> #}
+		</div>
+	</div>	
 {% endblock %}
 {% block javascripts %}{% endblock %}

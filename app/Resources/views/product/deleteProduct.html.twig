@@ -8,13 +8,12 @@
 	{{ dump(product) }} #}
 	
 	{# Mostramos el mensaje success #}
-	<hr><hr><hr>
-	<h2>{{ 'product.delete.header'|trans }}</h2>
-	
-	{{ 'product.delete.resolution'|trans }} {# El producto <strong>{{ product.name}}</strong> a sido eliminada. #}
-	<div>
-		{# <a href="{{ url('listActionProduct')}}">atrás</a> #}
+	<div id="content">
+		<h2>{{ 'product.delete.header'|trans }}</h2>
+		{{ 'product.delete.resolution'|trans }} 
+		<div>
+			{# <a href="{{ url('listActionProduct')}}">atrás</a> #}
+		</div>	
 	</div>
-	
 {% endblock %}
 {% block javascripts %}{% endblock %}

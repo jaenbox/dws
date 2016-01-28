@@ -7,44 +7,45 @@
 {% block body %}
 	{# Mostramos los objetos con dump 
 	{{ dump(person) }} #}
-	<hr><hr>
-	<h2>{{ 'person.list.header'|trans }}</h2>
-	{# Listamos el producto en una lista. #}
-	<table class="table table-striped">
-		<tbody>
-			<thead>
-				<tr>
-					<td>{{ 'person.id'|trans }}</td>
-					<td>{{ 'person.name'|trans }}</td>
-					<td>{{ 'person.email'|trans }}</td>
-					{% if is_granted('ROLE_APP_ADMIN') %}
-						<td>{{ 'global.delete'|trans }}</td>
-					{% endif %}
-				</tr>
-			</thead>	
-				{% for persona in person%}
+	<div class="content">
+		<h2>{{ 'person.list.header'|trans }}</h2>
+		{# Listamos el producto en una lista. #}
+		<table class="table table-striped">
+			<tbody>
+				<thead>
 					<tr>
-						<td><a href="{{
-							path(
-								'showPersonAction',
-								{ 'id': persona.id }
-							)
-							}}">
-							{{ persona.id }}</a></td>
-						<td>{{ persona.name }}</td>
-						<td>{{ persona.email }}</td>
+						<td>{{ 'person.id'|trans }}</td>
+						<td>{{ 'person.name'|trans }}</td>
+						<td>{{ 'person.email'|trans }}</td>
 						{% if is_granted('ROLE_APP_ADMIN') %}
-							<td><a href="{{
-								path(
-									'deletePersonAction',
-									{ 'id': persona.id }
-								) 
-								}}"><i class="fa fa-trash fa-lg"></i></a></td>
+							<td>{{ 'global.delete'|trans }}</td>
 						{% endif %}
 					</tr>
-				{% endfor %} 
-		</tbody>
-	</table> 
-	{# <a href="{{ url('newPersonAction')}}">atrás</a> #}
+				</thead>	
+					{% for persona in person%}
+						<tr>
+							<td><a href="{{
+								path(
+									'showPersonAction',
+									{ 'id': persona.id }
+								)
+								}}">
+								{{ persona.id }}</a></td>
+							<td>{{ persona.name }}</td>
+							<td>{{ persona.email }}</td>
+							{% if is_granted('ROLE_APP_ADMIN') %}
+								<td><a href="{{
+									path(
+										'deletePersonAction',
+										{ 'id': persona.id }
+									) 
+									}}"><i class="fa fa-trash fa-lg"></i></a></td>
+							{% endif %}
+						</tr>
+					{% endfor %} 
+			</tbody>
+		</table> 
+		{# <a href="{{ url('newPersonAction')}}">atrás</a> #}
+	</div>
 {% endblock %}
 {% block javascripts %}{% endblock %}

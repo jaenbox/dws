@@ -1,23 +1,4 @@
-Symfony2
+T5
 ==
-Proyecto curso 2ºDAW curso 2015/2016
 
 A Symfony project created on December 8, 2015, 7:44 pm.
-
-Controladores
-
-Enrutado
-
-Plantillas
-
-Base de datos Postgres y MySQL
-
-Validación
-
-Formularios
-
-Seguridad
-
-Traducción
-
-contact: jaenxbox@gmail.com

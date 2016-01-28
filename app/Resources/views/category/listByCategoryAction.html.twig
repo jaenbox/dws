@@ -4,9 +4,8 @@
 {% block title %}{{ 'category.listByCategory.title'|trans }}{% endblock %}
 
 {% block body %}
-
-	<hr><hr>
-	{# Listamos los productos en una lista. #}
+<div id="content">
+{# Listamos los productos en una lista. #}
 	<h4>{{ 'category.listByCategory.header'|trans }}<h4>
 
 	{% for product in category.products %}
@@ -17,5 +16,7 @@
 			</tr>
 		</table>
 	{% endfor %}
+
+</div>
 {% endblock %}
 {% block javascripts %}{% endblock %}

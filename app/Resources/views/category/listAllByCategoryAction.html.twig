@@ -6,25 +6,26 @@
 {% block body %}
 {# Listamos los productos en una lista. #}
 {# {{ dump(categories) }} #}
-	<hr><hr>
-	<h2>{{ 'category.listAllByCategory.header'|trans }}</h2>
-	<br>
-	<table  class="table table-striped">
-		<tbody>
-			{% for category in categories %}
-				<thead>
-					<tr>
-						<th>{{ category.name }}</td>
-					</tr>
-				</thead>
-				{% for product in category.products %}
-					<tr>
-						<td>{{ product.name }}</td>
-					</tr>
+	<div id="content">
+		<h2>{{ 'category.listAllByCategory.header'|trans }}</h2>
+		<br>
+		<table  class="table table-striped">
+			<tbody>
+				{% for category in categories %}
+					<thead>
+						<tr>
+							<th>{{ category.name }}</td>
+						</tr>
+					</thead>
+					{% for product in category.products %}
+						<tr>
+							<td>{{ product.name }}</td>
+						</tr>
+					{% endfor %}
 				{% endfor %}
-			{% endfor %}
-			
-		</tbody>
-	</table>	
+				
+			</tbody>
+		</table>	
+	</div>
 {% endblock %}
 {% block javascripts %}{% endblock %}
